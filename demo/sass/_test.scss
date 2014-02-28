@@ -1,0 +1,13 @@
+body {
+
+  @each $breakpoint-key in $breakpoint-list-keys {
+
+    // Index is 1 based.
+    $i: index($breakpoint-list-keys, $breakpoint-key);
+
+    &.breakpoint-#{$breakpoint-key} {
+
+      background-color: getRandomColor();
+    }
+  }
+}
