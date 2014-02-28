@@ -1,0 +1,176 @@
+/* line 1, ../sass/_js-breakpoints.scss */
+html:after {
+  content: "js-breakpoints-getComputedStyleTest";
+  display: none;
+}
+
+/*
+ * Breakpoints
+ */
+/* line 30, ../sass/_bridge.scss */
+head {
+  font-family: '"xxxx-small" "xxx-small" "xx-small" "x-small" "small" "medium" "large" "x-large" "xx-large"';
+}
+
+@media (max-width: 400px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "xxxx-small";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-xxxx-small {
+    position: absolute;
+  }
+}
+@media (min-width: 401px) and (max-width: 500px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "xxx-small";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-xxx-small {
+    position: absolute;
+  }
+}
+@media (min-width: 501px) and (max-width: 600px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "xx-small";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-xx-small {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 700px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "x-small";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-x-small {
+    position: absolute;
+  }
+}
+@media (min-width: 701px) and (max-width: 800px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "small";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-small {
+    position: absolute;
+  }
+}
+@media (min-width: 801px) and (max-width: 1100px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "medium";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-medium {
+    position: absolute;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "large";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-large {
+    position: absolute;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1800px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "x-large";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-x-large {
+    position: absolute;
+  }
+}
+@media (min-width: 1801px) and (max-width: 99999px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  body:after {
+    content: "xx-large";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  body .js-breakpoints-xx-large {
+    position: absolute;
+  }
+}
+
+/* line 51, ../sass/_bridge.scss */
+body:after {
+  display: none;
+}
+
+/* line 56, ../sass/_bridge.scss */
+body:after {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #FFF;
+  padding: 10px;
+  z-index: 1000;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+/* line 8, ../sass/_test.scss */
+body.breakpoint- {
+  background-color: #7c50be;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-xxxx-small {
+  background-color: #fdaf6c;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-xxx-small {
+  background-color: #5791ac;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-xx-small {
+  background-color: #0c7e83;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-x-small {
+  background-color: #b1eeee;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-small {
+  background-color: #4ece4d;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-medium {
+  background-color: #df8633;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-large {
+  background-color: #a61992;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-x-large {
+  background-color: #54d251;
+}
+/* line 8, ../sass/_test.scss */
+body.breakpoint-xx-large {
+  background-color: #fec786;
+}
