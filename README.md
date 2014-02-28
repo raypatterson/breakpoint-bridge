@@ -9,6 +9,8 @@ The top of the view port is a debugging message to indicate which breakpoint is 
 
 Within the console are logs which show the events within JavaScript correspond to the changes in the visual styling of the page.
 
+[See it in action](http://raypatterson.github.io/breakpoint-bridge/).
+
 ---
 
 To install dependencies and compile the SASS source files: `$ ./setup`
