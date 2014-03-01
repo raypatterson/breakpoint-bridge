@@ -12,7 +12,7 @@ html {
 /* line 6, ../sass/_test.scss */
 body {
   font-family: Helvetica, sans-serif;
-  font-style: bold;
+  font-weight: bold;
   color: #333333;
   padding: 0;
   margin: 0;
@@ -119,148 +119,359 @@ body {
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.xxxx-small-body {
-  background-color: #b0622a;
+  background-color: #24e70c;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.xxx-small-body {
-  background-color: #f94415;
+  background-color: #ba7cec;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.xx-small-body {
-  background-color: #19470e;
+  background-color: #3a0ba1;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.x-small-body {
-  background-color: #034a29;
+  background-color: #a3b94b;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.small-body {
-  background-color: #826b93;
+  background-color: #8d3d50;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.medium-body {
-  background-color: #c683ce;
+  background-color: #168931;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.large-body {
-  background-color: #ad8899;
+  background-color: #2327f9;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.x-large-body {
-  background-color: #d8961a;
+  background-color: #6107a6;
 }
 /* line 5, ../sass/_test-mixins.scss */
 body.xx-large-body {
-  background-color: #0e6916;
+  background-color: #ff53c2;
 }
 
 /* line 31, ../sass/_test.scss */
-section.articles {
-  width: 50%;
-  margin: 0 25%;
-  height: 100%;
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  bottom: 80%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+  height: 10%;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
-    content: "x-small-article";
+  .header:after {
+    content: "x-small-header";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-x-small-article {
+  .header .js-breakpoints-x-small-header {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .header:after {
+    content: "small-header";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .header .js-breakpoints-small-header {
+    position: absolute;
+  }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .header:after {
+    content: "medium-header";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .header .js-breakpoints-medium-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .header:after {
+    content: "large-header";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .header .js-breakpoints-large-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1600px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .header:after {
+    content: "x-large-header";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .header .js-breakpoints-x-large-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1601px) and (max-width: 99999px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .header:after {
+    content: "xx-large-header";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .header .js-breakpoints-xx-large-header {
+    position: absolute;
+  }
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.x-small-header {
+  background-color: #434fc2;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.small-header {
+  background-color: #74a480;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.medium-header {
+  background-color: #cc2713;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.large-header {
+  background-color: #cd403c;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.x-large-header {
+  background-color: #ded190;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.header.xx-large-header {
+  background-color: #b67fcc;
+}
+
+/* line 54, ../sass/_test.scss */
+.aside {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+@media (max-width: 400px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .aside:after {
+    content: "x-small-aside";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .aside .js-breakpoints-x-small-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 401px) and (max-width: 600px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .aside:after {
+    content: "small-aside";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .aside .js-breakpoints-small-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .aside:after {
+    content: "medium-aside";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .aside .js-breakpoints-medium-aside {
     position: absolute;
   }
 }
 @media (min-width: 801px) and (max-width: 1000px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
-    content: "small-article";
+  .aside:after {
+    content: "large-aside";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-small-article {
+  .aside .js-breakpoints-large-aside {
     position: absolute;
   }
 }
 @media (min-width: 1001px) and (max-width: 1200px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
+  .aside:after {
+    content: "x-large-aside";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .aside .js-breakpoints-x-large-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 1201px) and (max-width: 99999px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .aside:after {
+    content: "xx-large-aside";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .aside .js-breakpoints-xx-large-aside {
+    position: absolute;
+  }
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.x-small-aside {
+  background-color: #7b7c2f;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.small-aside {
+  background-color: #b9b696;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.medium-aside {
+  background-color: #9c2180;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.large-aside {
+  background-color: #1f5aff;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.x-large-aside {
+  background-color: #32e546;
+}
+/* line 5, ../sass/_test-mixins.scss */
+.aside.xx-large-aside {
+  background-color: #ab33c3;
+}
+
+/* line 76, ../sass/_test.scss */
+.article {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  margin-left: 50%;
+}
+@media (max-width: 800px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .article:after {
+    content: "x-small-article";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .article .js-breakpoints-x-small-article {
+    position: absolute;
+  }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .article:after {
+    content: "small-article";
+    display: none;
+  }
+  /* line 15, ../sass/_js-breakpoints.scss */
+  .article .js-breakpoints-small-article {
+    position: absolute;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  /* line 9, ../sass/_js-breakpoints.scss */
+  .article:after {
     content: "medium-article";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-medium-article {
+  .article .js-breakpoints-medium-article {
     position: absolute;
   }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
+  .article:after {
     content: "large-article";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-large-article {
+  .article .js-breakpoints-large-article {
     position: absolute;
   }
 }
 @media (min-width: 1401px) and (max-width: 1800px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
+  .article:after {
     content: "x-large-article";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-x-large-article {
+  .article .js-breakpoints-x-large-article {
     position: absolute;
   }
 }
 @media (min-width: 1801px) and (max-width: 99999px) {
   /* line 9, ../sass/_js-breakpoints.scss */
-  section.articles:after {
+  .article:after {
     content: "xx-large-article";
     display: none;
   }
   /* line 15, ../sass/_js-breakpoints.scss */
-  section.articles .js-breakpoints-xx-large-article {
+  .article .js-breakpoints-xx-large-article {
     position: absolute;
   }
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.x-small-article {
-  background-color: #88bd15;
+.article.x-small-article {
+  background-color: #2eff03;
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.small-article {
-  background-color: #c846d1;
+.article.small-article {
+  background-color: #5046b7;
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.medium-article {
-  background-color: #aabe56;
+.article.medium-article {
+  background-color: #f5d0ad;
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.large-article {
-  background-color: #87d32a;
+.article.large-article {
+  background-color: #52acd8;
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.x-large-article {
-  background-color: #cd1146;
+.article.x-large-article {
+  background-color: #72841e;
 }
 /* line 5, ../sass/_test-mixins.scss */
-section.articles.xx-large-article {
-  background-color: #63dfa7;
+.article.xx-large-article {
+  background-color: #b009a5;
 }
 
-/* line 50, ../sass/_test.scss */
+/* line 100, ../sass/_test.scss */
 .debug {
+  box-sizing: border-box;
   position: absolute;
+  border: 1px solid grey;
   background: lightgrey;
+  margin: 10px;
   padding: 10px;
 }
 
 /* line 1, ../sass/_bridge-init.scss */
 head {
-  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "xx-large-body" "||" "body .articles" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "xx-large-article"';
+  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "xx-large-body" "||" "header" "|" "x-small-header" "small-header" "medium-header" "large-header" "x-large-header" "xx-large-header" "||" "aside" "|" "x-small-aside" "small-aside" "medium-aside" "large-aside" "x-large-aside" "xx-large-aside" "||" "article" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "xx-large-article"';
 }
 
 /* line 5, ../sass/_bridge-debug.scss */

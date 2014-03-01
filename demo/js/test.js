@@ -20,7 +20,9 @@
     $el.removeClass(this.name);
   };
 
-  window.BreakpointBridge.activate($('body')[0], matched, exit);
-  window.BreakpointBridge.activate($('.articles'), matched, exit);
+  window.BreakpointBridge.activate('body', $('body')[0], matched, exit);
+  window.BreakpointBridge.activate('header', $('.header'), matched, exit);
+  window.BreakpointBridge.activate('aside', $('.aside'), matched, exit);
+  window.BreakpointBridge.activate('article', $('.article'), matched, exit);
 
 }(this.jQuery, this, this.document));

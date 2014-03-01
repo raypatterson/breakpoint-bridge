@@ -6,7 +6,7 @@ html {
 body {
 
   font-family: Helvetica, sans-serif;
-  font-style: bold;
+  font-weight: bold;
   color: #333333;
   padding: 0;
   margin: 0;
@@ -28,11 +28,61 @@ body {
   @include set-background-colors( $breakpoint-list );
 }
 
-section.articles {
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  bottom: 80%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+  height: 10%;
 
+  $breakpoint-list:
+     "x-small-header"   600px,
+       "small-header"   900px,
+      "medium-header"   1100px,
+       "large-header"   1300px,
+     "x-large-header"   1600px,
+    "xx-large-header"   99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'header' );
+  @include set-background-colors( $breakpoint-list );
+}
+
+.aside {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 50%;
-  margin: 0 25%;
-  height: 100%;
+
+  $breakpoint-list:
+     "x-small-aside"   400px,
+       "small-aside"   600px,
+      "medium-aside"   800px,
+       "large-aside"   1000px,
+     "x-large-aside"   1200px,
+    "xx-large-aside"   99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'aside' );
+  @include set-background-colors( $breakpoint-list );
+}
+
+.article {
+
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  margin-left: 50%;
 
   $breakpoint-list:
      "x-small-article"   800px,
@@ -43,12 +93,15 @@ section.articles {
     "xx-large-article"   99999px
   ;
 
-  @include breakpoint-bridge( $breakpoint-list, 'body .articles' );
+  @include breakpoint-bridge( $breakpoint-list, 'article' );
   @include set-background-colors( $breakpoint-list );
 }
 
 .debug {
+  box-sizing: border-box;
   position: absolute;
+  border: 1px solid grey;
   background: lightgrey;
+  margin: 10px;
   padding: 10px;
 }
