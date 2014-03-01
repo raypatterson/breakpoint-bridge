@@ -1,83 +1,75 @@
 ;
-(function($, window, document, undefined) {
+(function(window, document, undefined) {
 
   'use strict';
 
-  /**
-   * Extract map of all breakpoints and
-   * selectors from the <head> 'font-family'.
-   */
-  var map = $('head')
-    .css('font-family')
+  // Extract map of all breakpoints and
+  // selectors from the <head> 'font-family'.
+  var getStyle = function(el, styleProp) {
+    if (el.currentStyle) {
+      return el.currentStyle[styleProp];
+    } else if (window.getComputedStyle) {
+      return document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+    }
+  };
+
+  var map = (getStyle(document.getElementsByTagName('head')[0], 'font-family'))
     .replace(/'/g, '')
     .split(' "||" ');
 
   var breakpoints;
-  var selector;
-  var $el;
-  var el;
+  var val;
   var arr;
+  var id;
   var bp = {};
+  var i = 0;
+  var I = map.length;
 
-  $.each(map, function(key, val) {
+  for (i; i < I; i++) {
 
-    /**
-     * Parse breakpoints from map.
-     */
+    val = map[i];
+
+    // Parse breakpoints from map.
     arr = val.split(' "|" ');
     breakpoints = arr.pop().replace(/"/g, '').split(' ');
 
-    /**
-     * Parse selector from map.
-     */
-    selector = arr.pop().replace(/"/g, '');
-    $el = $(selector);
-    el = $el[0];
+    // Parse selector from map.
+    id = arr.pop().replace(/"/g, '');
 
-    /**
-     * Use element as key to access breakpoints.
-     */
-    bp[el] = breakpoints;
+    // Use element as key to access breakpoints.
+    bp[id] = breakpoints;
+  }
 
-    /**
-     * Create interface.
-     */
-    var BreakpointBridge = window.BreakpointBridge || {};
+  // Create interface.
+  var BreakpointBridge = window.BreakpointBridge || {};
 
-    BreakpointBridge.activate = function(el, matched, exit) {
+  BreakpointBridge.activate = function(id, el, matched, exit) {
 
-      /**
-       * Un-jQuery-ify.
-       */
-      if (el instanceof $) {
-        el = el[0];
-      }
+    // Un-$-ify.
+    if (el instanceof $) {
+      el = el[0];
+    }
 
-      var breakpoints = bp[el];
+    breakpoints = bp[id];
 
-      if (breakpoints !== undefined) {
-        /**
-         * Iterate though breakpoints and apply event handlers.
-         */
-        $.each(breakpoints, function(key, val) {
-          Breakpoints.on({
-            name: val,
-            el: el,
-            matched: matched,
-            exit: exit
-          });
+    if (breakpoints !== undefined) {
+
+      // Iterate though breakpoints and apply event handlers.
+      $.each(breakpoints, function(key, val) {
+        Breakpoints.on({
+          name: val,
+          el: el,
+          matched: matched,
+          exit: exit
         });
-      } else {
-        /**
-         * Breakpoints are undefined for this element.
-         */
-      }
-    };
+      });
+    } else {
 
-    /**
-     * Expose interface.
-     */
-    window.BreakpointBridge = BreakpointBridge;
-  });
+      // Breakpoints are undefined for this element.
+    }
+  };
 
-}(this.jQuery, this, this.document));
+  // Expose interface.
+  window.BreakpointBridge = BreakpointBridge;
+
+}(this, this.document));
