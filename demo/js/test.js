@@ -18,7 +18,6 @@
 
     $el = $(this.el);
     $el.removeClass(this.name);
-    $el.children('.debug').html(this.name);
   };
 
   window.BreakpointBridge.activate($('body')[0], matched, exit);
