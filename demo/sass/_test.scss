@@ -1,13 +1,54 @@
+html {
+
+  height: 100%;
+}
+
 body {
 
-  @each $breakpoint-key in $breakpoint-list-keys {
+  font-family: Helvetica, sans-serif;
+  font-style: bold;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 
-    // Index is 1 based.
-    $i: index($breakpoint-list-keys, $breakpoint-key);
+  $breakpoint-list:
+    "xxxx-small-body"   400px,
+     "xxx-small-body"   500px,
+      "xx-small-body"   600px,
+       "x-small-body"   700px,
+         "small-body"   800px,
+        "medium-body"   1100px,
+         "large-body"   1400px,
+       "x-large-body"   1800px,
+      "xx-large-body"   99999px
+  ;
 
-    &.breakpoint-#{$breakpoint-key} {
+  @include breakpoint-bridge( $breakpoint-list, 'body' );
+  @include set-background-colors( $breakpoint-list );
+}
 
-      background-color: getRandomColor();
-    }
-  }
+section.articles {
+
+  width: 50%;
+  margin: 0 25%;
+  height: 100%;
+
+  $breakpoint-list:
+     "x-small-article"   800px,
+       "small-article"   1000px,
+      "medium-article"   1200px,
+       "large-article"   1400px,
+     "x-large-article"   1800px,
+    "xx-large-article"   99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'body .articles' );
+  @include set-background-colors( $breakpoint-list );
+}
+
+.debug {
+  position: absolute;
+  background: lightgrey;
+  padding: 10px;
 }
