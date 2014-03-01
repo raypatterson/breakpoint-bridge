@@ -1,38 +1,83 @@
 ;
-(function(window, $) {
+(function($, window, document, undefined) {
 
-  var $el = $('body');
+  'use strict';
 
-  var el = $el[0];
-
-  var breakpoints = $('head')
+  /**
+   * Extract map of all breakpoints and
+   * selectors from the <head> 'font-family'.
+   */
+  var map = $('head')
     .css('font-family')
-    .replace(/"/g, '')
     .replace(/'/g, '')
-    .split(' ');
+    .split(' "||" ');
 
-  var getBreakpointClassName = function(val) {
-    return 'breakpoint-' + val;
-  };
+  var breakpoints;
+  var selector;
+  var $el;
+  var el;
+  var arr;
+  var bp = {};
 
-  $.each(breakpoints, function(key, val) {
+  $.each(map, function(key, val) {
 
-    Breakpoints.on({
-      name: val,
-      el: el,
-      matched: function() {
+    /**
+     * Parse breakpoints from map.
+     */
+    arr = val.split(' "|" ');
+    breakpoints = arr.pop().replace(/"/g, '').split(' ');
 
-        console.log("Breakpoint : matched :", val);
+    /**
+     * Parse selector from map.
+     */
+    selector = arr.pop().replace(/"/g, '');
+    $el = $(selector);
+    el = $el[0];
 
-        $el.addClass(getBreakpointClassName(val));
-      },
-      exit: function() {
+    /**
+     * Use element as key to access breakpoints.
+     */
+    bp[el] = breakpoints;
 
-        console.log("Breakpoint : exit :", val);
+    /**
+     * Create interface.
+     */
+    var BreakpointBridge = window.BreakpointBridge || {};
 
-        $el.removeClass(getBreakpointClassName(val));
+    BreakpointBridge.activate = function(el, matched, exit) {
+
+      /**
+       * Un-jQuery-ify.
+       */
+      if (el instanceof $) {
+        el = el[0];
       }
-    });
+
+      var breakpoints = bp[el];
+
+      if (breakpoints !== undefined) {
+        /**
+         * Iterate though breakpoints and apply event handlers.
+         */
+        $.each(breakpoints, function(key, val) {
+          Breakpoints.on({
+            name: val,
+            el: el,
+            matched: matched,
+            exit: exit
+          });
+        });
+      } else {
+        /**
+         * Breakpoints are undefined for this element.
+         */
+      }
+    };
+
+    /**
+     * Expose interface.
+     */
+    window.BreakpointBridge = BreakpointBridge;
   });
 
-}(this, this.jQuery));
+}(this.jQuery, this, this.document));

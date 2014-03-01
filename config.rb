@@ -1,6 +1,3 @@
-require 'breakpoint'
-require 'breakpoint-slicer'
-
 # https://gist.github.com/urre/4060461
 module Sass::Script::Functions
   def getRandomColor()
