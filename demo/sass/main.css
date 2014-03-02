@@ -1,0 +1,480 @@
+/* line 1, _js-breakpoints.scss */
+html:after {
+  content: "js-breakpoints-getComputedStyleTest";
+  display: none;
+}
+
+/* line 1, _test.scss */
+html {
+  height: 100%;
+}
+
+/* line 6, _test.scss */
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+@media (max-width: 400px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "xxxx-small-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-xxxx-small-body {
+    position: absolute;
+  }
+}
+@media (min-width: 401px) and (max-width: 500px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "xxx-small-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-xxx-small-body {
+    position: absolute;
+  }
+}
+@media (min-width: 501px) and (max-width: 600px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "xx-small-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-xx-small-body {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 700px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "x-small-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-x-small-body {
+    position: absolute;
+  }
+}
+@media (min-width: 701px) and (max-width: 800px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "small-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-small-body {
+    position: absolute;
+  }
+}
+@media (min-width: 801px) and (max-width: 1100px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "medium-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-medium-body {
+    position: absolute;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "large-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-large-body {
+    position: absolute;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1800px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "x-large-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-x-large-body {
+    position: absolute;
+  }
+}
+@media (min-width: 1801px) and (max-width: 99999px) {
+  /* line 9, _js-breakpoints.scss */
+  body:after {
+    content: "xx-large-body";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  body .js-breakpoints-xx-large-body {
+    position: absolute;
+  }
+}
+/* line 5, _test-mixins.scss */
+body.xxxx-small-body {
+  background-color: #7cae69;
+}
+/* line 5, _test-mixins.scss */
+body.xxx-small-body {
+  background-color: #2f0fdb;
+}
+/* line 5, _test-mixins.scss */
+body.xx-small-body {
+  background-color: #d73054;
+}
+/* line 5, _test-mixins.scss */
+body.x-small-body {
+  background-color: #9a232e;
+}
+/* line 5, _test-mixins.scss */
+body.small-body {
+  background-color: #ce36d3;
+}
+/* line 5, _test-mixins.scss */
+body.medium-body {
+  background-color: #df7877;
+}
+/* line 5, _test-mixins.scss */
+body.large-body {
+  background-color: #0f499e;
+}
+/* line 5, _test-mixins.scss */
+body.x-large-body {
+  background-color: #702ba0;
+}
+/* line 5, _test-mixins.scss */
+body.xx-large-body {
+  background-color: #e4e7bb;
+}
+
+/* line 31, _test.scss */
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  bottom: 80%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+  height: 10%;
+}
+@media (max-width: 600px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "x-small-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-x-small-header {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "small-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-small-header {
+    position: absolute;
+  }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "medium-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-medium-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "large-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-large-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1600px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "x-large-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-x-large-header {
+    position: absolute;
+  }
+}
+@media (min-width: 1601px) and (max-width: 99999px) {
+  /* line 9, _js-breakpoints.scss */
+  .header:after {
+    content: "xx-large-header";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .header .js-breakpoints-xx-large-header {
+    position: absolute;
+  }
+}
+/* line 5, _test-mixins.scss */
+.header.x-small-header {
+  background-color: #42bff9;
+}
+/* line 5, _test-mixins.scss */
+.header.small-header {
+  background-color: #4e80c6;
+}
+/* line 5, _test-mixins.scss */
+.header.medium-header {
+  background-color: #5edb98;
+}
+/* line 5, _test-mixins.scss */
+.header.large-header {
+  background-color: #a87cdd;
+}
+/* line 5, _test-mixins.scss */
+.header.x-large-header {
+  background-color: #9f9c63;
+}
+/* line 5, _test-mixins.scss */
+.header.xx-large-header {
+  background-color: #2c3218;
+}
+
+/* line 54, _test.scss */
+.aside {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+@media (max-width: 400px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "x-small-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-x-small-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 401px) and (max-width: 600px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "small-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-small-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "medium-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-medium-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "large-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-large-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "x-large-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-x-large-aside {
+    position: absolute;
+  }
+}
+@media (min-width: 1201px) and (max-width: 99999px) {
+  /* line 9, _js-breakpoints.scss */
+  .aside:after {
+    content: "xx-large-aside";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .aside .js-breakpoints-xx-large-aside {
+    position: absolute;
+  }
+}
+/* line 5, _test-mixins.scss */
+.aside.x-small-aside {
+  background-color: #210089;
+}
+/* line 5, _test-mixins.scss */
+.aside.small-aside {
+  background-color: #68a8c4;
+}
+/* line 5, _test-mixins.scss */
+.aside.medium-aside {
+  background-color: #023340;
+}
+/* line 5, _test-mixins.scss */
+.aside.large-aside {
+  background-color: #1eedbd;
+}
+/* line 5, _test-mixins.scss */
+.aside.x-large-aside {
+  background-color: #36385b;
+}
+/* line 5, _test-mixins.scss */
+.aside.xx-large-aside {
+  background-color: #b8482d;
+}
+
+/* line 76, _test.scss */
+.article {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  margin-left: 50%;
+}
+@media (max-width: 800px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "x-small-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-x-small-article {
+    position: absolute;
+  }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "small-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-small-article {
+    position: absolute;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "medium-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-medium-article {
+    position: absolute;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "large-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-large-article {
+    position: absolute;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1800px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "x-large-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-x-large-article {
+    position: absolute;
+  }
+}
+@media (min-width: 1801px) and (max-width: 99999px) {
+  /* line 9, _js-breakpoints.scss */
+  .article:after {
+    content: "xx-large-article";
+    display: none;
+  }
+  /* line 15, _js-breakpoints.scss */
+  .article .js-breakpoints-xx-large-article {
+    position: absolute;
+  }
+}
+/* line 5, _test-mixins.scss */
+.article.x-small-article {
+  background-color: #7df1f8;
+}
+/* line 5, _test-mixins.scss */
+.article.small-article {
+  background-color: #a2a25b;
+}
+/* line 5, _test-mixins.scss */
+.article.medium-article {
+  background-color: #a959d1;
+}
+/* line 5, _test-mixins.scss */
+.article.large-article {
+  background-color: #ae7eb2;
+}
+/* line 5, _test-mixins.scss */
+.article.x-large-article {
+  background-color: #65c4c9;
+}
+/* line 5, _test-mixins.scss */
+.article.xx-large-article {
+  background-color: #88da44;
+}
+
+/* line 100, _test.scss */
+.debug {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid grey;
+  background: lightgrey;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* line 1, _bridge-init.scss */
+head {
+  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "xx-large-body" "||" "header" "|" "x-small-header" "small-header" "medium-header" "large-header" "x-large-header" "xx-large-header" "||" "aside" "|" "x-small-aside" "small-aside" "medium-aside" "large-aside" "x-large-aside" "xx-large-aside" "||" "article" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "xx-large-article"';
+}
+
+/* line 5, _bridge-debug.scss */
+body:after {
+  display: none;
+}
