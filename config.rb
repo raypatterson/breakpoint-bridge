@@ -6,5 +6,5 @@ module Sass::Script::Functions
 end
 
 preferred_syntax = :scss
-sass_dir = 'demo/sass'
-css_dir = 'demo/css'
+sass_dir = 'demo'
+css_dir = 'demo'

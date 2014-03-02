@@ -1,3 +1,14 @@
+@mixin set-background-colors( $breakpoint-list ) {
+
+  @each $breakpoint in $breakpoint-list {
+
+    &.#{nth($breakpoint, 1)} {
+
+      background-color: getRandomColor();
+    }
+  }
+}
+
 html {
 
   height: 100%;
