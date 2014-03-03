@@ -1,4 +1,0 @@
-#!/bin/sh
-compass watch
-ruby -run -e httpd ./demo -p 8000 &
-open http://localhost:8000
