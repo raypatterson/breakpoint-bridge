@@ -1,10 +1,12 @@
-@mixin set-background-colors( $breakpoint-list ) {
+@mixin set-background-colors( $breakpoint-list, $color ) {
 
   @each $breakpoint in $breakpoint-list {
 
+    $idx: index($breakpoint-list, $breakpoint);
+
     &.#{nth($breakpoint, 1)} {
 
-      background-color: getRandomColor();
+      background-color: $color / ( $idx * 0.5 );
     }
   }
 }
@@ -36,7 +38,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'body' );
-  @include set-background-colors( $breakpoint-list );
+  @include set-background-colors( $breakpoint-list, #FFFFFF );
 }
 
 .header {
@@ -59,7 +61,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'header' );
-  @include set-background-colors( $breakpoint-list );
+  @include set-background-colors( $breakpoint-list, #ff0000 );
 }
 
 .aside {
@@ -81,7 +83,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'aside' );
-  @include set-background-colors( $breakpoint-list );
+  @include set-background-colors( $breakpoint-list, #00ff00 );
 }
 
 .article {
@@ -105,7 +107,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'article' );
-  @include set-background-colors( $breakpoint-list );
+  @include set-background-colors( $breakpoint-list, #0000ff );
 }
 
 .debug {
