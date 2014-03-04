@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "Ray Patterson",
+    "email": "github.raypatterson@github.com",
+    "url": "https://github.com/raypatterson/"
+  },
+  "name": "breakpoint-bridge",
+  "version": "0.0.0",
+  "homepage": "http://raypatterson.github.io/breakpoint-bridge",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://raw.github.com/raypatterson/breakpoint-bridge/master/LICENSE"
+  },
+  "bugs": "https://github.com/raypatterson/breakpoint-bridge/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:raypatterson/breakpoint-bridge.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "gulp-livereload": "~1.2.0",
+    "gulp-open": "~0.2.7",
+    "connect": "~2.12.0",
+    "connect-livereload": "~0.3.2",
+    "tiny-lr": "0.0.5",
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-usemin": "~0.3.2"
+  }
+}

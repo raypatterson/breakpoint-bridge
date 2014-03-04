@@ -1,4 +1,6 @@
 #!/bin/sh
 gem install bundler
 bundle install
-./run
+npm i -g gulp
+npm i
+gulp

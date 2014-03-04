@@ -1,0 +1,32 @@
+{
+  "options": {
+    "livereload": {
+      "port": 35729
+    },
+    "autoprefixer": {
+      "browers": [
+        "> 1%",
+        "last 10 versions",
+        "Firefox ESR",
+        "Opera 12.1",
+        "Android 4",
+        "Explorer 8"
+      ]
+    }
+  },
+  "env": {
+    "localhost": {
+      "url": {
+        "protocol": "http",
+        "domain": "localhost",
+        "port": 8888
+      }
+    }
+  },
+  "path": {
+    "base": ".",
+    "vendor": "vendor",
+    "source": "source",
+    "build": "build"
+  }
+}
