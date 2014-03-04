@@ -6,7 +6,7 @@
 
     &.#{nth($breakpoint, 1)} {
 
-      background-color: $color / ( $idx * 0.5 );
+      background-color: rgb(random(255), random(255), random(255));
     }
   }
 }

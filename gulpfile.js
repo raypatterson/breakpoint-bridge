@@ -27,7 +27,8 @@ gulp.task('usemin', function() {
 gulp.task('sass', function() {
   gulp.src('demo/source/sass/**/*.scss')
     .pipe(sass({
-      trace: true,
+      compass: true,
+      require: 'sassy-math',
       loadPath: ['vendor', 'library']
     }))
     .pipe(gulp.dest('demo/build/css'))
