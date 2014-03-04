@@ -1,0 +1,270 @@
+html:after {
+  content: "js-breakpoints-getComputedStyleTest";
+  display: none; }
+
+html {
+  height: 100%; }
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+  @media (max-width: 400px) {
+    body:after {
+      content: "xxxx-small-body";
+      display: none; }
+    body .js-breakpoints-xxxx-small-body {
+      position: absolute; } }
+  @media (min-width: 401px) and (max-width: 500px) {
+    body:after {
+      content: "xxx-small-body";
+      display: none; }
+    body .js-breakpoints-xxx-small-body {
+      position: absolute; } }
+  @media (min-width: 501px) and (max-width: 600px) {
+    body:after {
+      content: "xx-small-body";
+      display: none; }
+    body .js-breakpoints-xx-small-body {
+      position: absolute; } }
+  @media (min-width: 601px) and (max-width: 700px) {
+    body:after {
+      content: "x-small-body";
+      display: none; }
+    body .js-breakpoints-x-small-body {
+      position: absolute; } }
+  @media (min-width: 701px) and (max-width: 800px) {
+    body:after {
+      content: "small-body";
+      display: none; }
+    body .js-breakpoints-small-body {
+      position: absolute; } }
+  @media (min-width: 801px) and (max-width: 1100px) {
+    body:after {
+      content: "medium-body";
+      display: none; }
+    body .js-breakpoints-medium-body {
+      position: absolute; } }
+  @media (min-width: 1101px) and (max-width: 1400px) {
+    body:after {
+      content: "large-body";
+      display: none; }
+    body .js-breakpoints-large-body {
+      position: absolute; } }
+  @media (min-width: 1401px) and (max-width: 1800px) {
+    body:after {
+      content: "x-large-body";
+      display: none; }
+    body .js-breakpoints-x-large-body {
+      position: absolute; } }
+  @media (min-width: 1801px) and (max-width: 99999px) {
+    body:after {
+      content: "xx-large-body";
+      display: none; }
+    body .js-breakpoints-xx-large-body {
+      position: absolute; } }
+  body.xxxx-small-body {
+    background-color: #d0c64a; }
+  body.xxx-small-body {
+    background-color: #9d3871; }
+  body.xx-small-body {
+    background-color: #5e3046; }
+  body.x-small-body {
+    background-color: #4490a0; }
+  body.small-body {
+    background-color: #6362d3; }
+  body.medium-body {
+    background-color: #ed32e0; }
+  body.large-body {
+    background-color: #55d8d7; }
+  body.x-large-body {
+    background-color: #0b5363; }
+  body.xx-large-body {
+    background-color: #af65fb; }
+
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 5%;
+  bottom: 80%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+  height: 10%; }
+  @media (max-width: 600px) {
+    .header:after {
+      content: "x-small-header";
+      display: none; }
+    .header .js-breakpoints-x-small-header {
+      position: absolute; } }
+  @media (min-width: 601px) and (max-width: 900px) {
+    .header:after {
+      content: "small-header";
+      display: none; }
+    .header .js-breakpoints-small-header {
+      position: absolute; } }
+  @media (min-width: 901px) and (max-width: 1100px) {
+    .header:after {
+      content: "medium-header";
+      display: none; }
+    .header .js-breakpoints-medium-header {
+      position: absolute; } }
+  @media (min-width: 1101px) and (max-width: 1300px) {
+    .header:after {
+      content: "large-header";
+      display: none; }
+    .header .js-breakpoints-large-header {
+      position: absolute; } }
+  @media (min-width: 1301px) and (max-width: 1600px) {
+    .header:after {
+      content: "x-large-header";
+      display: none; }
+    .header .js-breakpoints-x-large-header {
+      position: absolute; } }
+  @media (min-width: 1601px) and (max-width: 99999px) {
+    .header:after {
+      content: "xx-large-header";
+      display: none; }
+    .header .js-breakpoints-xx-large-header {
+      position: absolute; } }
+  .header.x-small-header {
+    background-color: #02148b; }
+  .header.small-header {
+    background-color: #417c0d; }
+  .header.medium-header {
+    background-color: #f5e019; }
+  .header.large-header {
+    background-color: #70fdbf; }
+  .header.x-large-header {
+    background-color: #4d753b; }
+  .header.xx-large-header {
+    background-color: #856ad8; }
+
+.aside {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%; }
+  @media (max-width: 400px) {
+    .aside:after {
+      content: "x-small-aside";
+      display: none; }
+    .aside .js-breakpoints-x-small-aside {
+      position: absolute; } }
+  @media (min-width: 401px) and (max-width: 600px) {
+    .aside:after {
+      content: "small-aside";
+      display: none; }
+    .aside .js-breakpoints-small-aside {
+      position: absolute; } }
+  @media (min-width: 601px) and (max-width: 800px) {
+    .aside:after {
+      content: "medium-aside";
+      display: none; }
+    .aside .js-breakpoints-medium-aside {
+      position: absolute; } }
+  @media (min-width: 801px) and (max-width: 1000px) {
+    .aside:after {
+      content: "large-aside";
+      display: none; }
+    .aside .js-breakpoints-large-aside {
+      position: absolute; } }
+  @media (min-width: 1001px) and (max-width: 1200px) {
+    .aside:after {
+      content: "x-large-aside";
+      display: none; }
+    .aside .js-breakpoints-x-large-aside {
+      position: absolute; } }
+  @media (min-width: 1201px) and (max-width: 99999px) {
+    .aside:after {
+      content: "xx-large-aside";
+      display: none; }
+    .aside .js-breakpoints-xx-large-aside {
+      position: absolute; } }
+  .aside.x-small-aside {
+    background-color: #5ceba6; }
+  .aside.small-aside {
+    background-color: #ccfb8b; }
+  .aside.medium-aside {
+    background-color: #df6eab; }
+  .aside.large-aside {
+    background-color: #d746d2; }
+  .aside.x-large-aside {
+    background-color: #7e75f1; }
+  .aside.xx-large-aside {
+    background-color: #a0ed6c; }
+
+.article {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  margin-left: 50%; }
+  @media (max-width: 800px) {
+    .article:after {
+      content: "x-small-article";
+      display: none; }
+    .article .js-breakpoints-x-small-article {
+      position: absolute; } }
+  @media (min-width: 801px) and (max-width: 1000px) {
+    .article:after {
+      content: "small-article";
+      display: none; }
+    .article .js-breakpoints-small-article {
+      position: absolute; } }
+  @media (min-width: 1001px) and (max-width: 1200px) {
+    .article:after {
+      content: "medium-article";
+      display: none; }
+    .article .js-breakpoints-medium-article {
+      position: absolute; } }
+  @media (min-width: 1201px) and (max-width: 1400px) {
+    .article:after {
+      content: "large-article";
+      display: none; }
+    .article .js-breakpoints-large-article {
+      position: absolute; } }
+  @media (min-width: 1401px) and (max-width: 1800px) {
+    .article:after {
+      content: "x-large-article";
+      display: none; }
+    .article .js-breakpoints-x-large-article {
+      position: absolute; } }
+  @media (min-width: 1801px) and (max-width: 99999px) {
+    .article:after {
+      content: "xx-large-article";
+      display: none; }
+    .article .js-breakpoints-xx-large-article {
+      position: absolute; } }
+  .article.x-small-article {
+    background-color: #7ca2d8; }
+  .article.small-article {
+    background-color: #641f34; }
+  .article.medium-article {
+    background-color: #c5f007; }
+  .article.large-article {
+    background-color: #f51051; }
+  .article.x-large-article {
+    background-color: #3b4a67; }
+  .article.xx-large-article {
+    background-color: #6f5373; }
+
+.debug {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid grey;
+  background: lightgrey;
+  margin: 10px;
+  padding: 10px; }
+
+head {
+  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "xx-large-body" "||" "header" "|" "x-small-header" "small-header" "medium-header" "large-header" "x-large-header" "xx-large-header" "||" "aside" "|" "x-small-aside" "small-aside" "medium-aside" "large-aside" "x-large-aside" "xx-large-aside" "||" "article" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "xx-large-article"'; }
