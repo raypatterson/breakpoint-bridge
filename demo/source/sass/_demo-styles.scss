@@ -33,7 +33,7 @@ body {
          "small-body"   800px,
         "medium-body"   1100px,
          "large-body"   1400px,
-       "x-large-body"   1800px,
+       "x-large-body"   1600px,
       "xx-large-body"   99999px
   ;
 
@@ -74,16 +74,30 @@ body {
   width: 50%;
 
   $breakpoint-list:
-     "x-small-aside"   400px,
        "small-aside"   600px,
-      "medium-aside"   800px,
-       "large-aside"   1000px,
-     "x-large-aside"   1200px,
-    "xx-large-aside"   99999px
+      "medium-aside"   1000px,
+       "large-aside"   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'aside' );
   @include set-background-colors( $breakpoint-list, #00ff00 );
+
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.small-aside {
+    background-image: url('http://lorempixel.com/400/200/nature/Small%20Aside%20Image');
+  }
+
+  &.medium-aside {
+    background-image: url('http://lorempixel.com/600/300/nature/Medium%20Aside%20Image');
+  }
+
+  &.large-aside {
+    background-image: url('http://lorempixel.com/800/400/nature/Large%20Aside%20Image');
+  }
 }
 
 .article {
@@ -102,7 +116,7 @@ body {
        "small-article"   1000px,
       "medium-article"   1200px,
        "large-article"   1400px,
-     "x-large-article"   1800px,
+     "x-large-article"   1600px,
     "xx-large-article"   99999px
   ;
 
