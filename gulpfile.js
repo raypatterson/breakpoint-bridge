@@ -2,6 +2,7 @@ var config = require('./config.json');
 var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var sass = require('gulp-ruby-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var open_browser = require('gulp-open');
 var refresh = require('gulp-livereload');
 
@@ -31,6 +32,7 @@ gulp.task('sass', function() {
       require: 'sassy-math',
       loadPath: ['vendor', 'library']
     }))
+    .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers))
     .pipe(gulp.dest('demo/build/css'))
     .pipe(refresh(lr_server));
 });
@@ -51,7 +53,7 @@ gulp.task('server_connect', function() {
 });
 
 gulp.task('open', function() {
-  return gulp.src('./demo/build/index.html')
+  return gulp.src('demo/build/index.html')
     .pipe(open_browser('', {
       url: lh_url
     }));
