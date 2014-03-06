@@ -46,19 +46,21 @@
   var $el = $('.article .process');
   var $debug = $el.children('.debug');
   var count = 0;
-
   var process;
 
-  var startProcess = function() {
+  var enableProcess = function() {
 
-    $debug.html('process executing : ' + (count++));
+    $debug.html('process ' + count + ' enabled');
 
-    process = setTimeout(startProcess, 2000);
+    process = setTimeout(function() {
+      count++;
+      enableProcess();
+    }, 2000);
   };
 
-  var stopProcess = function() {
+  var disableProcess = function() {
 
-    $debug.html('process stopped : ' + count);
+    $debug.html('process ' + count + ' disabled');
 
     clearTimeout(process);
   };
@@ -69,11 +71,12 @@
 
     if (this.name.match(/disable/gi)) {
 
-      stopProcess();
+      disableProcess();
 
     } else if (this.name.match(/enable/gi)) {
 
-      startProcess();
+      enableProcess();
+
     }
 
   }, function() {

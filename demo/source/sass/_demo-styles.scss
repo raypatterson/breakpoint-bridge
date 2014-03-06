@@ -125,7 +125,7 @@ body {
   .process {
     $breakpoint-list:
       "disable-process"   500px,
-       "enable-process"   1000px
+       "enable-process"   99999px
     ;
 
     @include breakpoint-bridge( $breakpoint-list, 'process' );
