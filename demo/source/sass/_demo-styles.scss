@@ -1,4 +1,4 @@
-@mixin set-background-colors( $breakpoint-list, $color ) {
+@mixin set-background-colors( $breakpoint-list ) {
 
   @each $breakpoint in $breakpoint-list {
 
@@ -38,7 +38,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'body' );
-  @include set-background-colors( $breakpoint-list, #FFFFFF );
+  @include set-background-colors( $breakpoint-list );
 }
 
 .header {
@@ -61,7 +61,7 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'header' );
-  @include set-background-colors( $breakpoint-list, #ff0000 );
+  @include set-background-colors( $breakpoint-list );
 }
 
 .aside {
@@ -74,29 +74,28 @@ body {
   width: 50%;
 
   $breakpoint-list:
-       "small-aside"   600px,
-      "medium-aside"   1000px,
+       "small-aside"   700px,
+      "medium-aside"   1400px,
        "large-aside"   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'aside' );
-  @include set-background-colors( $breakpoint-list, #00ff00 );
-
+  @include set-background-colors( $breakpoint-list );
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
   &.small-aside {
-    background-image: url('http://lorempixel.com/400/200/nature/Small%20Aside%20Image');
+    background-image: url('http://dummyimage.com/350x700/828282/fff.jpg&text=Small+FPO+Image');
   }
 
   &.medium-aside {
-    background-image: url('http://lorempixel.com/600/300/nature/Medium%20Aside%20Image');
+    background-image: url('http://dummyimage.com/500x500/828282/fff.jpg&text=Medium+FPO+Image');
   }
 
   &.large-aside {
-    background-image: url('http://lorempixel.com/800/400/nature/Large%20Aside%20Image');
+    background-image: url('http://dummyimage.com/900x350/828282/fff.jpg&text=Large+FPO+Image');
   }
 }
 
@@ -121,7 +120,16 @@ body {
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'article' );
-  @include set-background-colors( $breakpoint-list, #0000ff );
+  @include set-background-colors( $breakpoint-list );
+
+  .process {
+    $breakpoint-list:
+      "disable-process"   500px,
+       "enable-process"   1000px
+    ;
+
+    @include breakpoint-bridge( $breakpoint-list, 'process' );
+  }
 }
 
 .debug {
