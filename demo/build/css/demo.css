@@ -67,23 +67,23 @@ body {
     body .js-breakpoints-xx-large-body {
       position: absolute; } }
   body.xxxx-small-body {
-    background-color: #f4dad2; }
+    background-color: #05fb74; }
   body.xxx-small-body {
-    background-color: #2014d7; }
+    background-color: #1acb57; }
   body.xx-small-body {
-    background-color: #374527; }
+    background-color: #94f8f7; }
   body.x-small-body {
-    background-color: #054b94; }
+    background-color: #d746b2; }
   body.small-body {
-    background-color: #cbb532; }
+    background-color: #f66d98; }
   body.medium-body {
-    background-color: #225cac; }
+    background-color: #6233ef; }
   body.large-body {
-    background-color: #b5f969; }
+    background-color: #63b5de; }
   body.x-large-body {
-    background-color: #a39dd4; }
+    background-color: #1b1584; }
   body.xx-large-body {
-    background-color: #e4b7fc; }
+    background-color: #9d7eac; }
 
 .header {
   -webkit-box-sizing: border-box;
@@ -133,17 +133,17 @@ body {
     .header .js-breakpoints-xx-large-header {
       position: absolute; } }
   .header.x-small-header {
-    background-color: #608ee5; }
+    background-color: #1b2dd1; }
   .header.small-header {
-    background-color: #c2d828; }
+    background-color: #9e48e9; }
   .header.medium-header {
-    background-color: #e49d53; }
+    background-color: #86d7f2; }
   .header.large-header {
-    background-color: #af420f; }
+    background-color: #087b45; }
   .header.x-large-header {
-    background-color: #c7a307; }
+    background-color: #522c94; }
   .header.xx-large-header {
-    background-color: #aea6cd; }
+    background-color: #bedae0; }
 
 .aside {
   -webkit-box-sizing: border-box;
@@ -178,11 +178,11 @@ body {
     .aside .js-breakpoints-large-aside {
       position: absolute; } }
   .aside.small-aside {
-    background-color: #d1825e; }
+    background-color: #b60926; }
   .aside.medium-aside {
-    background-color: #a86dd3; }
+    background-color: #cd78d6; }
   .aside.large-aside {
-    background-color: #940150; }
+    background-color: #aeb34e; }
   .aside.small-aside {
     background-image: url("http://dummyimage.com/350x700/828282/fff.jpg&text=Small+FPO+Image"); }
   .aside.medium-aside {
@@ -238,17 +238,17 @@ body {
     .article .js-breakpoints-xx-large-article {
       position: absolute; } }
   .article.x-small-article {
-    background-color: #0b7f33; }
+    background-color: #f62099; }
   .article.small-article {
-    background-color: #b1eaa0; }
+    background-color: #a8a27b; }
   .article.medium-article {
-    background-color: #93d0f0; }
+    background-color: #2a8a9f; }
   .article.large-article {
-    background-color: #06b7d7; }
+    background-color: #683953; }
   .article.x-large-article {
-    background-color: #a9914b; }
+    background-color: #40e9a9; }
   .article.xx-large-article {
-    background-color: #96c2b4; }
+    background-color: #9194fa; }
   @media (max-width: 500px) {
     .article .process:after {
       content: "disable-process";

@@ -254,27 +254,27 @@ window.Breakpoints = (function(window, document) {
 
   'use strict';
 
+  var $el = $('.article .process');
+  var $debug = $el.children('.debug');
+  var count = 0;
+
   var process;
 
   var startProcess = function() {
 
-    console.log('process begin');
+    $debug.html('process executing : ' + (count++));
 
-    process = setInterval(function() {
-
-      console.log('process complete');
-
-    }, 2000);
+    process = setTimeout(startProcess, 2000);
   };
 
   var stopProcess = function() {
 
-    console.log('process stop');
+    $debug.html('process stopped : ' + count);
 
-    clearInterval(process);
+    clearTimeout(process);
   };
 
-  window.BreakpointBridge.activate('process', $('.article .process'), function() {
+  window.BreakpointBridge.activate('process', $el, function() {
 
     console.log("Breakpoint : matched", this);
 
