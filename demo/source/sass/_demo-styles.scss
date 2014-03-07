@@ -26,15 +26,15 @@ body {
   height: 100%;
 
   $breakpoint-list:
-    "xxxx-small-body"   400px,
-     "xxx-small-body"   500px,
-      "xx-small-body"   600px,
-       "x-small-body"   700px,
-         "small-body"   800px,
-        "medium-body"   1100px,
-         "large-body"   1400px,
-       "x-large-body"   1600px,
-      "xx-large-body"   99999px
+    "xxxx-small-body"   400px,    //    0px   <--    400px
+     "xxx-small-body"   500px,    //  401px   <-->   500px
+      "xx-small-body"   600px,    //  501px   <-->   600px
+       "x-small-body"   700px,    //  601px   <-->   700px
+         "small-body"   800px,    //  701px   <-->   800px
+        "medium-body"   1100px,   //  801px   <-->   1100px
+         "large-body"   1400px,   // 1101px   <-->   1400px
+       "x-large-body"   1600px,   // 1401px   <-->   1600px
+      "infinite-body"   99999px   // 1601px    -->   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'body' );
@@ -57,7 +57,7 @@ body {
       "medium-header"   1100px,
        "large-header"   1300px,
      "x-large-header"   1600px,
-    "xx-large-header"   99999px
+    "infinite-header"   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'header' );
@@ -76,7 +76,8 @@ body {
   $breakpoint-list:
        "small-aside"   700px,
       "medium-aside"   1400px,
-       "large-aside"   99999px
+       "large-aside"   1800px,
+    "infinite-aside"   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'aside' );
@@ -97,6 +98,10 @@ body {
   &.large-aside {
     background-image: url('http://dummyimage.com/900x350/828282/fff.jpg&text=Large+Image');
   }
+
+  &.infinite-aside {
+    background-image: url('http://dummyimage.com/1400x500/828282/fff.jpg&text=Infinite+Image');
+  }
 }
 
 .article {
@@ -116,7 +121,7 @@ body {
       "medium-article"   1200px,
        "large-article"   1400px,
      "x-large-article"   1600px,
-    "xx-large-article"   99999px
+    "infinite-article"   99999px
   ;
 
   @include breakpoint-bridge( $breakpoint-list, 'article' );
