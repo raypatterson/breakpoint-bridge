@@ -125,7 +125,6 @@ $breakpoint-list:
 ;
 ```
 
----
 
 ##Why does it exist?
 
