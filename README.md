@@ -18,7 +18,7 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
 
 ###Example
 
-
+####HTML
 ```html
 <html>
   <head>
@@ -39,7 +39,7 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
 
 ```
 
-
+####SCSS
 ```scss
 .some.element {
 
@@ -54,7 +54,7 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
 }
 ```
 
-
+####JavaScript
 ```javascript
 window.BreakpointBridge.activate(
 
