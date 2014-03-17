@@ -44,7 +44,7 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
 .some.element {
 
   $breakpoint-list:
-         "small-element"   800px    //      0px    <--     800px
+         "small-element"    800px   //      0px    <--     800px
         "medium-element"   1100px   //    801px    <-->    1100px
          "large-element"  99999px   //   1101px     -->    To infinity…
   ;
@@ -122,7 +122,7 @@ In the following example the "large" breakpoint will exit at 1401px:
 
 ```scss
 $breakpoint-list:
-   "small"   800px,    //    0px    <--     800px
+   "small"    800px,   //    0px    <--     800px
   "medium"   1100px,   //  801px    <-->    1100px
    "large"   1400px,   // 1101px    <-->    1400px
 ;
@@ -132,7 +132,7 @@ Adding an additional *"infinite"* upper limit yeilds the following:
 
 ```scss
 $breakpoint-list:
-   "small"   800px,    //    0px    <--     800px
+   "small"    800px,   //    0px    <--     800px
   "medium"   1100px,   //  801px    <-->    1100px
    "large"   1400px,   // 1101px    <-->    1400px
 "infinite"  99999px,   // 1401px     -->    basically infinity :)
