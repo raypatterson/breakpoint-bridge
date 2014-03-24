@@ -1,8 +1,26 @@
-@mixin set-background-colors( $breakpoint-list ) {
+@mixin set-background-images( $breakpoint-list ) {
 
   @each $breakpoint in $breakpoint-list {
 
     $idx: index($breakpoint-list, $breakpoint);
+    $key: nth($breakpoint, 1);
+    $val: nth($breakpoint, 2);
+
+    // @debug $breakpoint;
+    // @debug $idx;
+    // @debug $key;
+    // @debug $val;
+
+    &.#{$key} {
+
+      background-image: url('/img/#{$key}.jpg');
+    }
+  }
+}
+
+@mixin set-background-colors( $breakpoint-list ) {
+
+  @each $breakpoint in $breakpoint-list {
 
     &.#{nth($breakpoint, 1)} {
 
@@ -72,36 +90,20 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
   width: 50%;
-
-  $breakpoint-list:
-       "small-aside"   700px,
-      "medium-aside"   1400px,
-       "large-aside"   1800px,
-    "infinite-aside"   99999px
-  ;
-
-  @include breakpoint-bridge( $breakpoint-list, 'aside' );
-  @include set-background-colors( $breakpoint-list );
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
-  &.small-aside {
-    background-image: url('http://dummyimage.com/350x700/828282/fff.jpg&text=Small+Image');
-  }
+  $breakpoint-list:
+       "aside-small"   700px,
+      "aside-medium"   1400px,
+       "aside-large"   1800px,
+    "aside-infinite"   99999px
+  ;
 
-  &.medium-aside {
-    background-image: url('http://dummyimage.com/500x500/828282/fff.jpg&text=Medium+Image');
-  }
+  @include breakpoint-bridge( $breakpoint-list, 'aside' );
 
-  &.large-aside {
-    background-image: url('http://dummyimage.com/900x350/828282/fff.jpg&text=Large+Image');
-  }
-
-  &.infinite-aside {
-    background-image: url('http://dummyimage.com/1400x500/828282/fff.jpg&text=Infinite+Image');
-  }
+  @include set-background-images( $breakpoint-list );
 }
 
 .article {

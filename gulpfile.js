@@ -1,5 +1,6 @@
 var config = require('./config.json');
 var gulp = require('gulp');
+var clean = require('gulp-clean');
 var usemin = require('gulp-usemin');
 var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -16,15 +17,6 @@ var lh_vars = config.env.localhost;
 var lh_port = lh_vars.url.port;
 var lh_url = lh_vars.url.protocol + '://' + lh_vars.url.domain + ':' + lh_port + '/';
 
-gulp.task('usemin', function() {
-  gulp.src('demo/source/index.html')
-    .pipe(usemin({
-      // in this case css will be only concatenated (like css: ['concat']).
-    }))
-    .pipe(gulp.dest('demo/build'))
-    .pipe(refresh(lr_server));
-});
-
 gulp.task('sass', function() {
   gulp.src('demo/source/sass/**/*.scss')
     .pipe(sass({
@@ -34,6 +26,30 @@ gulp.task('sass', function() {
     }))
     .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers))
     .pipe(gulp.dest('demo/build/css'))
+    .pipe(refresh(lr_server));
+});
+
+gulp.task('usemin', function() {
+
+  gulp.src('demo/source/index.html')
+    .pipe(usemin({
+      // in this case css will be only concatenated (like css: ['concat']).
+    }))
+    .pipe(gulp.dest('demo/build'))
+    .pipe(refresh(lr_server));
+});
+
+gulp.task('img', function() {
+
+  gulp.src('demo/build/img', {
+    read: false
+  })
+    .pipe(clean({
+      force: true
+    }));
+
+  gulp.src('demo/source/img/**/*')
+    .pipe(gulp.dest('demo/build/img'))
     .pipe(refresh(lr_server));
 });
 
@@ -59,13 +75,13 @@ gulp.task('open', function() {
     }));
 });
 
-
 gulp.task('watch', function() {
   gulp.watch(['demo/source/**/*.html', 'demo/source/js/**/*.js', 'library/**/*.js'], ['usemin']);
   gulp.watch(['demo/source/sass/**/*.scss', 'library/**/*.scss'], ['sass']);
+  gulp.watch(['demo/source/img/**/*'], ['img']);
 });
 
-gulp.task('build', ['sass', 'usemin']);
+gulp.task('build', ['sass', 'usemin', 'img']);
 
 gulp.task('server', ['server_livereload', 'server_connect']);
 
