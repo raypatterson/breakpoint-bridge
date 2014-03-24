@@ -1,0 +1,36 @@
+@mixin set-background-images( $breakpoint-list ) {
+
+  @each $breakpoint in $breakpoint-list {
+
+    $key: nth($breakpoint, 1);
+
+    &.#{$key} {
+
+      background-image: url('/img/#{$key}.jpg');
+    }
+  }
+}
+
+.aside {
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  $breakpoint-list:
+       "aside-small"   700px,
+      "aside-medium"   1400px,
+       "aside-large"   1800px,
+    "aside-infinite"   99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'aside' );
+
+  @include set-background-images( $breakpoint-list );
+}

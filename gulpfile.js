@@ -41,14 +41,16 @@ gulp.task('usemin', function() {
 
 gulp.task('img', function() {
 
-  gulp.src('demo/build/img', {
+  gulp.src('demo/build/img/**/*', {
     read: false
   })
     .pipe(clean({
       force: true
     }));
 
-  gulp.src('demo/source/img/**/*')
+  gulp.src('demo/source/img/**/*.jpg', {
+    base: 'demo/source/img'
+  })
     .pipe(gulp.dest('demo/build/img'))
     .pipe(refresh(lr_server));
 });
