@@ -59,6 +59,7 @@ gulp.task('open', function() {
     }));
 });
 
+
 gulp.task('watch', function() {
   gulp.watch(['demo/source/**/*.html', 'demo/source/js/**/*.js', 'library/**/*.js'], ['usemin']);
   gulp.watch(['demo/source/sass/**/*.scss', 'library/**/*.scss'], ['sass']);
