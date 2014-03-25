@@ -26,6 +26,7 @@
     "tiny-lr": "0.0.5",
     "gulp-ruby-sass": "~0.4.0",
     "gulp-usemin": "~0.3.2",
-    "gulp-autoprefixer": "0.0.6"
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-clean": "~0.2.4"
   }
 }

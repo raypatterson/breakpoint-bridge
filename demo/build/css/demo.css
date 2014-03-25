@@ -9,268 +9,41 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   color: #333333;
+  background: #e6e6e6;
   padding: 0;
   margin: 0;
   height: 100%; }
-  @media (max-width: 400px) {
-    body:after {
-      content: "xxxx-small-body";
-      display: none; }
-    body .js-breakpoints-xxxx-small-body {
-      position: absolute; } }
-  @media (min-width: 401px) and (max-width: 500px) {
-    body:after {
-      content: "xxx-small-body";
-      display: none; }
-    body .js-breakpoints-xxx-small-body {
-      position: absolute; } }
-  @media (min-width: 501px) and (max-width: 600px) {
-    body:after {
-      content: "xx-small-body";
-      display: none; }
-    body .js-breakpoints-xx-small-body {
-      position: absolute; } }
-  @media (min-width: 601px) and (max-width: 700px) {
-    body:after {
-      content: "x-small-body";
-      display: none; }
-    body .js-breakpoints-x-small-body {
-      position: absolute; } }
-  @media (min-width: 701px) and (max-width: 800px) {
-    body:after {
-      content: "small-body";
-      display: none; }
-    body .js-breakpoints-small-body {
-      position: absolute; } }
-  @media (min-width: 801px) and (max-width: 1100px) {
-    body:after {
-      content: "medium-body";
-      display: none; }
-    body .js-breakpoints-medium-body {
-      position: absolute; } }
-  @media (min-width: 1101px) and (max-width: 1400px) {
-    body:after {
-      content: "large-body";
-      display: none; }
-    body .js-breakpoints-large-body {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1600px) {
-    body:after {
-      content: "x-large-body";
-      display: none; }
-    body .js-breakpoints-x-large-body {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    body:after {
-      content: "infinite-body";
-      display: none; }
-    body .js-breakpoints-infinite-body {
-      position: absolute; } }
-  body.xxxx-small-body {
-    background-color: #00aa53; }
-  body.xxx-small-body {
-    background-color: #1c5a70; }
-  body.xx-small-body {
-    background-color: #f7c123; }
-  body.x-small-body {
-    background-color: #efc61b; }
-  body.small-body {
-    background-color: #7eb8eb; }
-  body.medium-body {
-    background-color: #6c75f9; }
-  body.large-body {
-    background-color: #b359d0; }
-  body.x-large-body {
-    background-color: #6cc63e; }
-  body.infinite-body {
-    background-color: #7f7ccc; }
 
-.header {
+.process-state {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: 5%;
-  bottom: 80%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
   width: 100%;
-  height: 10%; }
-  @media (max-width: 600px) {
-    .header:after {
-      content: "x-small-header";
-      display: none; }
-    .header .js-breakpoints-x-small-header {
-      position: absolute; } }
-  @media (min-width: 601px) and (max-width: 900px) {
-    .header:after {
-      content: "small-header";
-      display: none; }
-    .header .js-breakpoints-small-header {
-      position: absolute; } }
-  @media (min-width: 901px) and (max-width: 1100px) {
-    .header:after {
-      content: "medium-header";
-      display: none; }
-    .header .js-breakpoints-medium-header {
-      position: absolute; } }
-  @media (min-width: 1101px) and (max-width: 1300px) {
-    .header:after {
-      content: "large-header";
-      display: none; }
-    .header .js-breakpoints-large-header {
-      position: absolute; } }
-  @media (min-width: 1301px) and (max-width: 1600px) {
-    .header:after {
-      content: "x-large-header";
-      display: none; }
-    .header .js-breakpoints-x-large-header {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    .header:after {
-      content: "infinite-header";
-      display: none; }
-    .header .js-breakpoints-infinite-header {
-      position: absolute; } }
-  .header.x-small-header {
-    background-color: #694416; }
-  .header.small-header {
-    background-color: #956bcb; }
-  .header.medium-header {
-    background-color: #077b86; }
-  .header.large-header {
-    background-color: #64d88b; }
-  .header.x-large-header {
-    background-color: #9467f9; }
-  .header.infinite-header {
-    background-color: #303a93; }
+  height: 15%;
+  background: #333333;
+  overflow: hidden; }
 
-.aside {
+.background-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: 10%;
+  top: 15%;
   bottom: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
   width: 50%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; }
-  @media (max-width: 700px) {
-    .aside:after {
-      content: "small-aside";
-      display: none; }
-    .aside .js-breakpoints-small-aside {
-      position: absolute; } }
-  @media (min-width: 701px) and (max-width: 1400px) {
-    .aside:after {
-      content: "medium-aside";
-      display: none; }
-    .aside .js-breakpoints-medium-aside {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1800px) {
-    .aside:after {
-      content: "large-aside";
-      display: none; }
-    .aside .js-breakpoints-large-aside {
-      position: absolute; } }
-  @media (min-width: 1801px) and (max-width: 99999px) {
-    .aside:after {
-      content: "infinite-aside";
-      display: none; }
-    .aside .js-breakpoints-infinite-aside {
-      position: absolute; } }
-  .aside.small-aside {
-    background-color: #0dbd8f; }
-  .aside.medium-aside {
-    background-color: #eeb2cb; }
-  .aside.large-aside {
-    background-color: #0597fa; }
-  .aside.infinite-aside {
-    background-color: #a99b2f; }
-  .aside.small-aside {
-    background-image: url("http://dummyimage.com/350x700/828282/fff.jpg&text=Small+Image"); }
-  .aside.medium-aside {
-    background-image: url("http://dummyimage.com/500x500/828282/fff.jpg&text=Medium+Image"); }
-  .aside.large-aside {
-    background-image: url("http://dummyimage.com/900x350/828282/fff.jpg&text=Large+Image"); }
-  .aside.infinite-aside {
-    background-image: url("http://dummyimage.com/1400x500/828282/fff.jpg&text=Infinite+Image"); }
+  overflow: hidden; }
 
-.article {
+.inline-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: 10%;
+  top: 15%;
   bottom: 0;
-  margin-top: 5%;
-  margin-bottom: 5%;
   width: 50%;
-  margin-left: 50%; }
-  @media (max-width: 800px) {
-    .article:after {
-      content: "x-small-article";
-      display: none; }
-    .article .js-breakpoints-x-small-article {
-      position: absolute; } }
-  @media (min-width: 801px) and (max-width: 1000px) {
-    .article:after {
-      content: "small-article";
-      display: none; }
-    .article .js-breakpoints-small-article {
-      position: absolute; } }
-  @media (min-width: 1001px) and (max-width: 1200px) {
-    .article:after {
-      content: "medium-article";
-      display: none; }
-    .article .js-breakpoints-medium-article {
-      position: absolute; } }
-  @media (min-width: 1201px) and (max-width: 1400px) {
-    .article:after {
-      content: "large-article";
-      display: none; }
-    .article .js-breakpoints-large-article {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1600px) {
-    .article:after {
-      content: "x-large-article";
-      display: none; }
-    .article .js-breakpoints-x-large-article {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    .article:after {
-      content: "infinite-article";
-      display: none; }
-    .article .js-breakpoints-infinite-article {
-      position: absolute; } }
-  .article.x-small-article {
-    background-color: #a3d0f9; }
-  .article.small-article {
-    background-color: #44fb8d; }
-  .article.medium-article {
-    background-color: #198610; }
-  .article.large-article {
-    background-color: #fa53e7; }
-  .article.x-large-article {
-    background-color: #84b79b; }
-  .article.infinite-article {
-    background-color: #98473c; }
-  @media (max-width: 500px) {
-    .article .process:after {
-      content: "disable-process";
-      display: none; }
-    .article .process .js-breakpoints-disable-process {
-      position: absolute; } }
-  @media (min-width: 501px) and (max-width: 99999px) {
-    .article .process:after {
-      content: "enable-process";
-      display: none; }
-    .article .process .js-breakpoints-enable-process {
-      position: absolute; } }
+  margin-left: 50%;
+  overflow: hidden; }
 
 .debug {
   -webkit-box-sizing: border-box;
@@ -282,5 +55,96 @@ body {
   margin: 10px;
   padding: 10px; }
 
+.background-image {
+  -webkit-box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media (max-width: 700px) {
+    .background-image:after {
+      content: "background-image-small";
+      display: none; }
+    .background-image .js-breakpoints-background-image-small {
+      position: absolute; } }
+  @media (min-width: 701px) and (max-width: 1400px) {
+    .background-image:after {
+      content: "background-image-medium";
+      display: none; }
+    .background-image .js-breakpoints-background-image-medium {
+      position: absolute; } }
+  @media (min-width: 1401px) and (max-width: 1800px) {
+    .background-image:after {
+      content: "background-image-large";
+      display: none; }
+    .background-image .js-breakpoints-background-image-large {
+      position: absolute; } }
+  @media (min-width: 1801px) and (max-width: 99999px) {
+    .background-image:after {
+      content: "background-image-infinite";
+      display: none; }
+    .background-image .js-breakpoints-background-image-infinite {
+      position: absolute; } }
+  .background-image.background-image-small {
+    background-image: url("/img/background-image-small.jpg"); }
+  .background-image.background-image-medium {
+    background-image: url("/img/background-image-medium.jpg"); }
+  .background-image.background-image-large {
+    background-image: url("/img/background-image-large.jpg"); }
+  .background-image.background-image-infinite {
+    background-image: url("/img/background-image-infinite.jpg"); }
+
+.inline-image img {
+  width: 100%;
+  height: auto; }
+@media (max-width: 800px) {
+  .inline-image:after {
+    content: "inline-image-small";
+    display: none; }
+  .inline-image .js-breakpoints-inline-image-small {
+    position: absolute; } }
+@media (min-width: 801px) and (max-width: 1100px) {
+  .inline-image:after {
+    content: "inline-image-medium";
+    display: none; }
+  .inline-image .js-breakpoints-inline-image-medium {
+    position: absolute; } }
+@media (min-width: 1101px) and (max-width: 1500px) {
+  .inline-image:after {
+    content: "inline-image-large";
+    display: none; }
+  .inline-image .js-breakpoints-inline-image-large {
+    position: absolute; } }
+@media (min-width: 1501px) and (max-width: 99999px) {
+  .inline-image:after {
+    content: "inline-image-infinite";
+    display: none; }
+  .inline-image .js-breakpoints-inline-image-infinite {
+    position: absolute; } }
+
+.process-state .process {
+  width: 10px;
+  height: 10px;
+  background: #828282;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 5px 2.5px #848484;
+  box-shadow: 0px 0px 5px 2.5px #848484; }
+@media (max-width: 500px) {
+  .process-state:after {
+    content: "process-state-disable";
+    display: none; }
+  .process-state .js-breakpoints-process-state-disable {
+    position: absolute; } }
+@media (min-width: 501px) and (max-width: 99999px) {
+  .process-state:after {
+    content: "process-state-enable";
+    display: none; }
+  .process-state .js-breakpoints-process-state-enable {
+    position: absolute; } }
+
 head {
-  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "infinite-body" "||" "header" "|" "x-small-header" "small-header" "medium-header" "large-header" "x-large-header" "infinite-header" "||" "aside" "|" "small-aside" "medium-aside" "large-aside" "infinite-aside" "||" "article" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "infinite-article" "||" "process" "|" "disable-process" "enable-process"'; }
+  font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite" "||" "process-state" "|" "process-state-disable" "process-state-enable"'; }
