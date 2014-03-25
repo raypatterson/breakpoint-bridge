@@ -1,5 +1,18 @@
 .process-state {
 
+  $size: 10px;
+
+  .process {
+    width: $size;
+    height: $size;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 5px 2.5px rgba(255, 255, 255, 1);
+  }
+
   $breakpoint-list:
      "process-state-disable"   500px,
      "process-state-enable"    99999px

@@ -16,10 +16,22 @@
 
     $debug.html('process ' + count + ' enabled');
 
+    $('<div class="process process-' + count + '" style="left:' + Math.floor(Math.random() * 100) + '%;"></div>')
+      .appendTo($el)
+      .animate({
+        'opacity': '0',
+        'top': '0%'
+      }, {
+        duration: Math.floor(Math.random() * 250) + 250,
+        complete: function() {
+          $(this).remove();
+        }
+      });
+
     process = setTimeout(function() {
       count++;
       enableProcess();
-    }, 2000);
+    }, Math.floor(Math.random() * 50) + 50);
   };
 
   var disableProcess = function() {
