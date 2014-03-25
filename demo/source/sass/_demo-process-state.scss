@@ -5,12 +5,12 @@
   .process {
     width: $size;
     height: $size;
-    background: white;
+    background: #828282;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 100;
-    box-shadow: 0px 0px 5px 2.5px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 2.5px rgba(132, 132, 132, 1);
   }
 
   $breakpoint-list:

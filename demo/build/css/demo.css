@@ -126,13 +126,13 @@ body {
 .process-state .process {
   width: 10px;
   height: 10px;
-  background: white;
+  background: #828282;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 100;
-  -webkit-box-shadow: 0px 0px 5px 2.5px white;
-  box-shadow: 0px 0px 5px 2.5px white; }
+  -webkit-box-shadow: 0px 0px 5px 2.5px #848484;
+  box-shadow: 0px 0px 5px 2.5px #848484; }
 @media (max-width: 500px) {
   .process-state:after {
     content: "process-state-disable";
