@@ -12,78 +12,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100%; }
-  @media (max-width: 400px) {
-    body:after {
-      content: "xxxx-small-body";
-      display: none; }
-    body .js-breakpoints-xxxx-small-body {
-      position: absolute; } }
-  @media (min-width: 401px) and (max-width: 500px) {
-    body:after {
-      content: "xxx-small-body";
-      display: none; }
-    body .js-breakpoints-xxx-small-body {
-      position: absolute; } }
-  @media (min-width: 501px) and (max-width: 600px) {
-    body:after {
-      content: "xx-small-body";
-      display: none; }
-    body .js-breakpoints-xx-small-body {
-      position: absolute; } }
-  @media (min-width: 601px) and (max-width: 700px) {
-    body:after {
-      content: "x-small-body";
-      display: none; }
-    body .js-breakpoints-x-small-body {
-      position: absolute; } }
-  @media (min-width: 701px) and (max-width: 800px) {
-    body:after {
-      content: "small-body";
-      display: none; }
-    body .js-breakpoints-small-body {
-      position: absolute; } }
-  @media (min-width: 801px) and (max-width: 1100px) {
-    body:after {
-      content: "medium-body";
-      display: none; }
-    body .js-breakpoints-medium-body {
-      position: absolute; } }
-  @media (min-width: 1101px) and (max-width: 1400px) {
-    body:after {
-      content: "large-body";
-      display: none; }
-    body .js-breakpoints-large-body {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1600px) {
-    body:after {
-      content: "x-large-body";
-      display: none; }
-    body .js-breakpoints-x-large-body {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    body:after {
-      content: "infinite-body";
-      display: none; }
-    body .js-breakpoints-infinite-body {
-      position: absolute; } }
-  body.xxxx-small-body {
-    background-color: #399154; }
-  body.xxx-small-body {
-    background-color: #f15a97; }
-  body.xx-small-body {
-    background-color: #4cc102; }
-  body.x-small-body {
-    background-color: #2d7966; }
-  body.small-body {
-    background-color: #138146; }
-  body.medium-body {
-    background-color: #6423e4; }
-  body.large-body {
-    background-color: #8f3ba6; }
-  body.x-large-body {
-    background-color: #06f176; }
-  body.infinite-body {
-    background-color: #5c3c1c; }
 
 .header {
   -webkit-box-sizing: border-box;
@@ -96,54 +24,17 @@ body {
   margin-bottom: 2.5%;
   width: 100%;
   height: 10%; }
-  @media (max-width: 600px) {
-    .header:after {
-      content: "x-small-header";
-      display: none; }
-    .header .js-breakpoints-x-small-header {
-      position: absolute; } }
-  @media (min-width: 601px) and (max-width: 900px) {
-    .header:after {
-      content: "small-header";
-      display: none; }
-    .header .js-breakpoints-small-header {
-      position: absolute; } }
-  @media (min-width: 901px) and (max-width: 1100px) {
-    .header:after {
-      content: "medium-header";
-      display: none; }
-    .header .js-breakpoints-medium-header {
-      position: absolute; } }
-  @media (min-width: 1101px) and (max-width: 1300px) {
-    .header:after {
-      content: "large-header";
-      display: none; }
-    .header .js-breakpoints-large-header {
-      position: absolute; } }
-  @media (min-width: 1301px) and (max-width: 1600px) {
-    .header:after {
-      content: "x-large-header";
-      display: none; }
-    .header .js-breakpoints-x-large-header {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    .header:after {
-      content: "infinite-header";
-      display: none; }
-    .header .js-breakpoints-infinite-header {
-      position: absolute; } }
-  .header.x-small-header {
-    background-color: #469e23; }
-  .header.small-header {
-    background-color: #96a2d4; }
-  .header.medium-header {
-    background-color: #f4cfc6; }
-  .header.large-header {
-    background-color: #3577c8; }
-  .header.x-large-header {
-    background-color: #3a5747; }
-  .header.infinite-header {
-    background-color: #7aa879; }
+
+.aside {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%; }
 
 .article {
   -webkit-box-sizing: border-box;
@@ -156,66 +47,6 @@ body {
   margin-bottom: 5%;
   width: 50%;
   margin-left: 50%; }
-  @media (max-width: 800px) {
-    .article:after {
-      content: "x-small-article";
-      display: none; }
-    .article .js-breakpoints-x-small-article {
-      position: absolute; } }
-  @media (min-width: 801px) and (max-width: 1000px) {
-    .article:after {
-      content: "small-article";
-      display: none; }
-    .article .js-breakpoints-small-article {
-      position: absolute; } }
-  @media (min-width: 1001px) and (max-width: 1200px) {
-    .article:after {
-      content: "medium-article";
-      display: none; }
-    .article .js-breakpoints-medium-article {
-      position: absolute; } }
-  @media (min-width: 1201px) and (max-width: 1400px) {
-    .article:after {
-      content: "large-article";
-      display: none; }
-    .article .js-breakpoints-large-article {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1600px) {
-    .article:after {
-      content: "x-large-article";
-      display: none; }
-    .article .js-breakpoints-x-large-article {
-      position: absolute; } }
-  @media (min-width: 1601px) and (max-width: 99999px) {
-    .article:after {
-      content: "infinite-article";
-      display: none; }
-    .article .js-breakpoints-infinite-article {
-      position: absolute; } }
-  .article.x-small-article {
-    background-color: #7bf00f; }
-  .article.small-article {
-    background-color: #75120a; }
-  .article.medium-article {
-    background-color: #793099; }
-  .article.large-article {
-    background-color: #163123; }
-  .article.x-large-article {
-    background-color: #84ae61; }
-  .article.infinite-article {
-    background-color: #e530da; }
-  @media (max-width: 500px) {
-    .article .process:after {
-      content: "disable-process";
-      display: none; }
-    .article .process .js-breakpoints-disable-process {
-      position: absolute; } }
-  @media (min-width: 501px) and (max-width: 99999px) {
-    .article .process:after {
-      content: "enable-process";
-      display: none; }
-    .article .process .js-breakpoints-enable-process {
-      position: absolute; } }
 
 .debug {
   -webkit-box-sizing: border-box;
@@ -227,16 +58,80 @@ body {
   margin: 10px;
   padding: 10px; }
 
+@media (max-width: 400px) {
+  body:after {
+    content: "body-xxxx-small";
+    display: none; }
+  body .js-breakpoints-body-xxxx-small {
+    position: absolute; } }
+@media (min-width: 401px) and (max-width: 500px) {
+  body:after {
+    content: "body-xxx-small";
+    display: none; }
+  body .js-breakpoints-body-xxx-small {
+    position: absolute; } }
+@media (min-width: 501px) and (max-width: 600px) {
+  body:after {
+    content: "body-xx-small";
+    display: none; }
+  body .js-breakpoints-body-xx-small {
+    position: absolute; } }
+@media (min-width: 601px) and (max-width: 700px) {
+  body:after {
+    content: "body-x-small";
+    display: none; }
+  body .js-breakpoints-body-x-small {
+    position: absolute; } }
+@media (min-width: 701px) and (max-width: 800px) {
+  body:after {
+    content: "body-small";
+    display: none; }
+  body .js-breakpoints-body-small {
+    position: absolute; } }
+@media (min-width: 801px) and (max-width: 1100px) {
+  body:after {
+    content: "body-medium";
+    display: none; }
+  body .js-breakpoints-body-medium {
+    position: absolute; } }
+@media (min-width: 1101px) and (max-width: 1400px) {
+  body:after {
+    content: "body-large";
+    display: none; }
+  body .js-breakpoints-body-large {
+    position: absolute; } }
+@media (min-width: 1401px) and (max-width: 1600px) {
+  body:after {
+    content: "body-x-large";
+    display: none; }
+  body .js-breakpoints-body-x-large {
+    position: absolute; } }
+@media (min-width: 1601px) and (max-width: 99999px) {
+  body:after {
+    content: "body-infinite";
+    display: none; }
+  body .js-breakpoints-body-infinite {
+    position: absolute; } }
+body.body-xxxx-small {
+  background-color: #4e956e; }
+body.body-xxx-small {
+  background-color: #83e5eb; }
+body.body-xx-small {
+  background-color: #a30a86; }
+body.body-x-small {
+  background-color: #850cd7; }
+body.body-small {
+  background-color: #e5b6c1; }
+body.body-medium {
+  background-color: #80ebce; }
+body.body-large {
+  background-color: #46796a; }
+body.body-x-large {
+  background-color: #425906; }
+body.body-infinite {
+  background-color: #63e83f; }
+
 .aside {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: 10%;
-  bottom: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 50%;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,5 +169,48 @@ body {
   .aside.aside-infinite {
     background-image: url("/img/aside-infinite.jpg"); }
 
+.article img {
+  width: 100%;
+  height: auto; }
+@media (max-width: 800px) {
+  .article:after {
+    content: "article-small";
+    display: none; }
+  .article .js-breakpoints-article-small {
+    position: absolute; } }
+@media (min-width: 801px) and (max-width: 1100px) {
+  .article:after {
+    content: "article-medium";
+    display: none; }
+  .article .js-breakpoints-article-medium {
+    position: absolute; } }
+@media (min-width: 1101px) and (max-width: 1500px) {
+  .article:after {
+    content: "article-large";
+    display: none; }
+  .article .js-breakpoints-article-large {
+    position: absolute; } }
+@media (min-width: 1501px) and (max-width: 99999px) {
+  .article:after {
+    content: "article-infinite";
+    display: none; }
+  .article .js-breakpoints-article-infinite {
+    position: absolute; } }
+
+.header {
+  background: black; }
+  @media (max-width: 500px) {
+    .header:after {
+      content: "process-disable";
+      display: none; }
+    .header .js-breakpoints-process-disable {
+      position: absolute; } }
+  @media (min-width: 501px) and (max-width: 99999px) {
+    .header:after {
+      content: "process-enable";
+      display: none; }
+    .header .js-breakpoints-process-enable {
+      position: absolute; } }
+
 head {
-  font-family: '"body" "|" "xxxx-small-body" "xxx-small-body" "xx-small-body" "x-small-body" "small-body" "medium-body" "large-body" "x-large-body" "infinite-body" "||" "header" "|" "x-small-header" "small-header" "medium-header" "large-header" "x-large-header" "infinite-header" "||" "article" "|" "x-small-article" "small-article" "medium-article" "large-article" "x-large-article" "infinite-article" "||" "process" "|" "disable-process" "enable-process" "||" "aside" "|" "aside-small" "aside-medium" "aside-large" "aside-infinite"'; }
+  font-family: '"body" "|" "body-xxxx-small" "body-xxx-small" "body-xx-small" "body-x-small" "body-small" "body-medium" "body-large" "body-x-large" "body-infinite" "||" "aside" "|" "aside-small" "aside-medium" "aside-large" "aside-infinite" "||" "article" "|" "article-small" "article-medium" "article-large" "article-infinite" "||" "process" "|" "process-disable" "process-enable"'; }

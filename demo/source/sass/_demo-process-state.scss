@@ -1,0 +1,11 @@
+.header {
+
+  background: black;
+
+  $breakpoint-list:
+    "process-disable"   500px,
+     "process-enable"   99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'process' );
+}

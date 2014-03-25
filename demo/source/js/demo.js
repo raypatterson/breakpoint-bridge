@@ -29,9 +29,33 @@
   };
 
   window.BreakpointBridge.activate('body', $('body')[0], matched, exit);
-  window.BreakpointBridge.activate('header', $('.header'), matched, exit);
   window.BreakpointBridge.activate('aside', $('.aside'), matched, exit);
   window.BreakpointBridge.activate('article', $('.article'), matched, exit);
+
+}(this.jQuery, this, this.document));
+
+/**
+ * Updating an inline image
+ */
+
+(function($, window, document, undefined) {
+
+  'use strict';
+
+  var $el = $('.article');
+  var $img = $el.children('img');
+
+  window.BreakpointBridge.activate('article', $el, function() {
+
+    console.log("Breakpoint : matched", this);
+
+    $img.attr('src', '/img/' + this.name + '.jpg');
+
+  }, function() {
+
+    console.log("Breakpoint : exit", this);
+
+  });
 
 }(this.jQuery, this, this.document));
 
@@ -43,7 +67,7 @@
 
   'use strict';
 
-  var $el = $('.article .process');
+  var $el = $('.header');
   var $debug = $el.children('.debug');
   var count = 0;
   var process;

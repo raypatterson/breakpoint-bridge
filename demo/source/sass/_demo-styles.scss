@@ -1,14 +1,3 @@
-@mixin set-background-colors( $breakpoint-list ) {
-
-  @each $breakpoint in $breakpoint-list {
-
-    &.#{nth($breakpoint, 1)} {
-
-      background-color: rgb(random(255), random(255), random(255));
-    }
-  }
-}
-
 html {
 
   height: 100%;
@@ -22,24 +11,10 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-
-  $breakpoint-list:
-    "xxxx-small-body"   400px,    //    0px   <--    400px
-     "xxx-small-body"   500px,    //  401px   <-->   500px
-      "xx-small-body"   600px,    //  501px   <-->   600px
-       "x-small-body"   700px,    //  601px   <-->   700px
-         "small-body"   800px,    //  701px   <-->   800px
-        "medium-body"   1100px,   //  801px   <-->   1100px
-         "large-body"   1400px,   // 1101px   <-->   1400px
-       "x-large-body"   1600px,   // 1401px   <-->   1600px
-      "infinite-body"   99999px   // 1601px    -->   99999px
-  ;
-
-  @include breakpoint-bridge( $breakpoint-list, 'body' );
-  @include set-background-colors( $breakpoint-list );
 }
 
 .header {
+
   box-sizing: border-box;
   position: absolute;
   top: 5%;
@@ -48,18 +23,17 @@ body {
   margin-bottom: 2.5%;
   width: 100%;
   height: 10%;
+}
 
-  $breakpoint-list:
-     "x-small-header"   600px,
-       "small-header"   900px,
-      "medium-header"   1100px,
-       "large-header"   1300px,
-     "x-large-header"   1600px,
-    "infinite-header"   99999px
-  ;
+.aside {
 
-  @include breakpoint-bridge( $breakpoint-list, 'header' );
-  @include set-background-colors( $breakpoint-list );
+  box-sizing: border-box;
+  position: absolute;
+  top: 10%;
+  bottom: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
 }
 
 .article {
@@ -72,27 +46,6 @@ body {
   margin-bottom: 5%;
   width: 50%;
   margin-left: 50%;
-
-  $breakpoint-list:
-     "x-small-article"   800px,
-       "small-article"   1000px,
-      "medium-article"   1200px,
-       "large-article"   1400px,
-     "x-large-article"   1600px,
-    "infinite-article"   99999px
-  ;
-
-  @include breakpoint-bridge( $breakpoint-list, 'article' );
-  @include set-background-colors( $breakpoint-list );
-
-  .process {
-    $breakpoint-list:
-      "disable-process"   500px,
-       "enable-process"   99999px
-    ;
-
-    @include breakpoint-bridge( $breakpoint-list, 'process' );
-  }
 }
 
 .debug {
