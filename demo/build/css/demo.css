@@ -9,23 +9,21 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   color: #333333;
+  background: #e6e6e6;
   padding: 0;
   margin: 0;
   height: 100%; }
 
-.header {
+.process-state {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: 5%;
-  bottom: 80%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
   width: 100%;
-  height: 10%; }
+  height: 20%;
+  background: #333333; }
 
-.aside {
+.background-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -36,7 +34,7 @@ body {
   margin-bottom: 5%;
   width: 50%; }
 
-.article {
+.inline-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -58,159 +56,86 @@ body {
   margin: 10px;
   padding: 10px; }
 
-@media (max-width: 400px) {
-  body:after {
-    content: "body-xxxx-small";
-    display: none; }
-  body .js-breakpoints-body-xxxx-small {
-    position: absolute; } }
-@media (min-width: 401px) and (max-width: 500px) {
-  body:after {
-    content: "body-xxx-small";
-    display: none; }
-  body .js-breakpoints-body-xxx-small {
-    position: absolute; } }
-@media (min-width: 501px) and (max-width: 600px) {
-  body:after {
-    content: "body-xx-small";
-    display: none; }
-  body .js-breakpoints-body-xx-small {
-    position: absolute; } }
-@media (min-width: 601px) and (max-width: 700px) {
-  body:after {
-    content: "body-x-small";
-    display: none; }
-  body .js-breakpoints-body-x-small {
-    position: absolute; } }
-@media (min-width: 701px) and (max-width: 800px) {
-  body:after {
-    content: "body-small";
-    display: none; }
-  body .js-breakpoints-body-small {
-    position: absolute; } }
-@media (min-width: 801px) and (max-width: 1100px) {
-  body:after {
-    content: "body-medium";
-    display: none; }
-  body .js-breakpoints-body-medium {
-    position: absolute; } }
-@media (min-width: 1101px) and (max-width: 1400px) {
-  body:after {
-    content: "body-large";
-    display: none; }
-  body .js-breakpoints-body-large {
-    position: absolute; } }
-@media (min-width: 1401px) and (max-width: 1600px) {
-  body:after {
-    content: "body-x-large";
-    display: none; }
-  body .js-breakpoints-body-x-large {
-    position: absolute; } }
-@media (min-width: 1601px) and (max-width: 99999px) {
-  body:after {
-    content: "body-infinite";
-    display: none; }
-  body .js-breakpoints-body-infinite {
-    position: absolute; } }
-body.body-xxxx-small {
-  background-color: #4e956e; }
-body.body-xxx-small {
-  background-color: #83e5eb; }
-body.body-xx-small {
-  background-color: #a30a86; }
-body.body-x-small {
-  background-color: #850cd7; }
-body.body-small {
-  background-color: #e5b6c1; }
-body.body-medium {
-  background-color: #80ebce; }
-body.body-large {
-  background-color: #46796a; }
-body.body-x-large {
-  background-color: #425906; }
-body.body-infinite {
-  background-color: #63e83f; }
-
-.aside {
+.background-image {
+  -webkit-box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
   @media (max-width: 700px) {
-    .aside:after {
-      content: "aside-small";
+    .background-image:after {
+      content: "background-image-small";
       display: none; }
-    .aside .js-breakpoints-aside-small {
+    .background-image .js-breakpoints-background-image-small {
       position: absolute; } }
   @media (min-width: 701px) and (max-width: 1400px) {
-    .aside:after {
-      content: "aside-medium";
+    .background-image:after {
+      content: "background-image-medium";
       display: none; }
-    .aside .js-breakpoints-aside-medium {
+    .background-image .js-breakpoints-background-image-medium {
       position: absolute; } }
   @media (min-width: 1401px) and (max-width: 1800px) {
-    .aside:after {
-      content: "aside-large";
+    .background-image:after {
+      content: "background-image-large";
       display: none; }
-    .aside .js-breakpoints-aside-large {
+    .background-image .js-breakpoints-background-image-large {
       position: absolute; } }
   @media (min-width: 1801px) and (max-width: 99999px) {
-    .aside:after {
-      content: "aside-infinite";
+    .background-image:after {
+      content: "background-image-infinite";
       display: none; }
-    .aside .js-breakpoints-aside-infinite {
+    .background-image .js-breakpoints-background-image-infinite {
       position: absolute; } }
-  .aside.aside-small {
-    background-image: url("/img/aside-small.jpg"); }
-  .aside.aside-medium {
-    background-image: url("/img/aside-medium.jpg"); }
-  .aside.aside-large {
-    background-image: url("/img/aside-large.jpg"); }
-  .aside.aside-infinite {
-    background-image: url("/img/aside-infinite.jpg"); }
+  .background-image.background-image-small {
+    background-image: url("/img/background-image-small.jpg"); }
+  .background-image.background-image-medium {
+    background-image: url("/img/background-image-medium.jpg"); }
+  .background-image.background-image-large {
+    background-image: url("/img/background-image-large.jpg"); }
+  .background-image.background-image-infinite {
+    background-image: url("/img/background-image-infinite.jpg"); }
 
-.article img {
+.inline-image img {
   width: 100%;
   height: auto; }
 @media (max-width: 800px) {
-  .article:after {
-    content: "article-small";
+  .inline-image:after {
+    content: "inline-image-small";
     display: none; }
-  .article .js-breakpoints-article-small {
+  .inline-image .js-breakpoints-inline-image-small {
     position: absolute; } }
 @media (min-width: 801px) and (max-width: 1100px) {
-  .article:after {
-    content: "article-medium";
+  .inline-image:after {
+    content: "inline-image-medium";
     display: none; }
-  .article .js-breakpoints-article-medium {
+  .inline-image .js-breakpoints-inline-image-medium {
     position: absolute; } }
 @media (min-width: 1101px) and (max-width: 1500px) {
-  .article:after {
-    content: "article-large";
+  .inline-image:after {
+    content: "inline-image-large";
     display: none; }
-  .article .js-breakpoints-article-large {
+  .inline-image .js-breakpoints-inline-image-large {
     position: absolute; } }
 @media (min-width: 1501px) and (max-width: 99999px) {
-  .article:after {
-    content: "article-infinite";
+  .inline-image:after {
+    content: "inline-image-infinite";
     display: none; }
-  .article .js-breakpoints-article-infinite {
+  .inline-image .js-breakpoints-inline-image-infinite {
     position: absolute; } }
 
-.header {
-  background: black; }
-  @media (max-width: 500px) {
-    .header:after {
-      content: "process-disable";
-      display: none; }
-    .header .js-breakpoints-process-disable {
-      position: absolute; } }
-  @media (min-width: 501px) and (max-width: 99999px) {
-    .header:after {
-      content: "process-enable";
-      display: none; }
-    .header .js-breakpoints-process-enable {
-      position: absolute; } }
+@media (max-width: 500px) {
+  .process-state:after {
+    content: "process-state-disable";
+    display: none; }
+  .process-state .js-breakpoints-process-state-disable {
+    position: absolute; } }
+@media (min-width: 501px) and (max-width: 99999px) {
+  .process-state:after {
+    content: "process-state-enable";
+    display: none; }
+  .process-state .js-breakpoints-process-state-enable {
+    position: absolute; } }
 
 head {
-  font-family: '"body" "|" "body-xxxx-small" "body-xxx-small" "body-xx-small" "body-x-small" "body-small" "body-medium" "body-large" "body-x-large" "body-infinite" "||" "aside" "|" "aside-small" "aside-medium" "aside-large" "aside-infinite" "||" "article" "|" "article-small" "article-medium" "article-large" "article-infinite" "||" "process" "|" "process-disable" "process-enable"'; }
+  font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite" "||" "process-state" "|" "process-state-disable" "process-state-enable"'; }

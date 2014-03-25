@@ -11,20 +11,22 @@
   }
 }
 
-.aside {
+.background-image {
+
+  box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
   $breakpoint-list:
-       "aside-small"   700px,
-      "aside-medium"   1400px,
-       "aside-large"   1800px,
-    "aside-infinite"   99999px
+       "background-image-small"      700px,
+       "background-image-medium"     1400px,
+       "background-image-large"      1800px,
+       "background-image-infinite"   99999px
   ;
 
-  @include breakpoint-bridge( $breakpoint-list, 'aside' );
+  @include breakpoint-bridge( $breakpoint-list, 'background-image' );
 
   @include set-background-images( $breakpoint-list );
 }

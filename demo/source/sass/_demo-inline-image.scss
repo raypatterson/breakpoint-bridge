@@ -1,0 +1,16 @@
+.inline-image {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  $breakpoint-list:
+       "inline-image-small"       800px,
+       "inline-image-medium"      1100px,
+       "inline-image-large"       1500px,
+       "inline-image-infinite"    99999px
+  ;
+
+  @include breakpoint-bridge( $breakpoint-list, 'inline-image' );
+}

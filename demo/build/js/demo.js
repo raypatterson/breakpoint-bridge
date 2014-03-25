@@ -210,54 +210,43 @@ window.Breakpoints = (function (window, document) {
   window.BreakpointBridge = BreakpointBridge;
 
 }(this, this.document));
-;
-
 /**
- * Updating content.
- * Adding and removing a CSS class.
+ * Updating an element background image by adding and removing CSS classes.
  */
 
+;
 (function($, window, document, undefined) {
 
   'use strict';
 
-  var $el;
-
-  var matched = function() {
+  window.BreakpointBridge.activate('background-image', $('.background-image'), function() {
 
     console.log("Breakpoint : matched", this);
 
-    $el = $(this.el);
-    $el.addClass(this.name);
-    $el.children('.debug').html(this.name);
-  };
+    $(this.el).addClass(this.name);
 
-  var exit = function() {
+  }, function() {
 
     console.log("Breakpoint : exit", this);
 
-    $el = $(this.el);
-    $el.removeClass(this.name);
-  };
+    $(this.el).removeClass(this.name);
 
-  window.BreakpointBridge.activate('body', $('body')[0], matched, exit);
-  window.BreakpointBridge.activate('aside', $('.aside'), matched, exit);
-  window.BreakpointBridge.activate('article', $('.article'), matched, exit);
+  });
 
 }(this.jQuery, this, this.document));
-
 /**
- * Updating an inline image
+ * Updating an inline image element by assiging the image tag 'src' attribute.
  */
 
+;
 (function($, window, document, undefined) {
 
   'use strict';
 
-  var $el = $('.article');
+  var $el = $('.inline-image');
   var $img = $el.children('img');
 
-  window.BreakpointBridge.activate('article', $el, function() {
+  window.BreakpointBridge.activate('inline-image', $el, function() {
 
     console.log("Breakpoint : matched", this);
 
@@ -270,16 +259,16 @@ window.Breakpoints = (function (window, document) {
   });
 
 }(this.jQuery, this, this.document));
-
 /**
- * Enabling and disabling a process.
+ * Enabling and disabling a JavaScript process.
  */
 
+;
 (function($, window, document, undefined) {
 
   'use strict';
 
-  var $el = $('.header');
+  var $el = $('.process-state');
   var $debug = $el.children('.debug');
   var count = 0;
   var process;
@@ -301,17 +290,17 @@ window.Breakpoints = (function (window, document) {
     clearTimeout(process);
   };
 
-  window.BreakpointBridge.activate('process', $el, function() {
+  window.BreakpointBridge.activate('process-state', $el, function() {
 
     console.log("Breakpoint : matched", this);
 
-    if (this.name.match(/disable/gi)) {
-
-      disableProcess();
-
-    } else if (this.name.match(/enable/gi)) {
+    if (this.name.match(/enable/gi)) {
 
       enableProcess();
+
+    } else {
+
+      disableProcess();
 
     }
 
