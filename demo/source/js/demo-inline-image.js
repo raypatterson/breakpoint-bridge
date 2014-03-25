@@ -14,7 +14,7 @@
 
     console.log("Breakpoint : matched", this);
 
-    $img.attr('src', '/img/' + this.name + '.jpg');
+    $img.attr('src', '../img/' + this.name + '.jpg');
 
   }, function() {
 

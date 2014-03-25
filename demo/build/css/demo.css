@@ -87,13 +87,13 @@ body {
     .background-image .js-breakpoints-background-image-infinite {
       position: absolute; } }
   .background-image.background-image-small {
-    background-image: url("/img/background-image-small.jpg"); }
+    background-image: url("../img/background-image-small.jpg"); }
   .background-image.background-image-medium {
-    background-image: url("/img/background-image-medium.jpg"); }
+    background-image: url("../img/background-image-medium.jpg"); }
   .background-image.background-image-large {
-    background-image: url("/img/background-image-large.jpg"); }
+    background-image: url("../img/background-image-large.jpg"); }
   .background-image.background-image-infinite {
-    background-image: url("/img/background-image-infinite.jpg"); }
+    background-image: url("../img/background-image-infinite.jpg"); }
 
 .inline-image img {
   width: 100%;

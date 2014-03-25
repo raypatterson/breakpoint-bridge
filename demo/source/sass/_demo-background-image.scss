@@ -6,7 +6,7 @@
 
     &.#{$key} {
 
-      background-image: url('/img/#{$key}.jpg');
+      background-image: url('../img/#{$key}.jpg');
     }
   }
 }
