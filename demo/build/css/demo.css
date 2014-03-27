@@ -23,6 +23,16 @@ body {
   height: 15%;
   background: #333333;
   overflow: hidden; }
+  .process-state .process {
+    width: 10px;
+    height: 10px;
+    background: #828282;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 5px 2.5px #848484;
+    box-shadow: 0px 0px 5px 2.5px #848484; }
 
 .background-image {
   -webkit-box-sizing: border-box;
@@ -32,7 +42,13 @@ body {
   top: 15%;
   bottom: 50%;
   width: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .inline-image {
   -webkit-box-sizing: border-box;
@@ -44,6 +60,9 @@ body {
   width: 50%;
   margin-left: 50%;
   overflow: hidden; }
+  .inline-image img {
+    width: 100%;
+    height: auto; }
 
 .debug {
   -webkit-box-sizing: border-box;
@@ -55,99 +74,77 @@ body {
   margin: 10px;
   padding: 10px; }
 
-.background-image {
-  -webkit-box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; }
-  @media (max-width: 700px) {
-    .background-image:after {
-      content: "background-image-small";
-      display: none; }
-    .background-image .js-breakpoints-background-image-small {
-      position: absolute; } }
-  @media (min-width: 701px) and (max-width: 1400px) {
-    .background-image:after {
-      content: "background-image-medium";
-      display: none; }
-    .background-image .js-breakpoints-background-image-medium {
-      position: absolute; } }
-  @media (min-width: 1401px) and (max-width: 1800px) {
-    .background-image:after {
-      content: "background-image-large";
-      display: none; }
-    .background-image .js-breakpoints-background-image-large {
-      position: absolute; } }
-  @media (min-width: 1801px) and (max-width: 99999px) {
-    .background-image:after {
-      content: "background-image-infinite";
-      display: none; }
-    .background-image .js-breakpoints-background-image-infinite {
-      position: absolute; } }
-  head {
-    font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite"'; }
-  .background-image.background-image-small {
-    background-image: url("../img/background-image-small.jpg"); }
-  .background-image.background-image-medium {
-    background-image: url("../img/background-image-medium.jpg"); }
-  .background-image.background-image-large {
-    background-image: url("../img/background-image-large.jpg"); }
-  .background-image.background-image-infinite {
-    background-image: url("../img/background-image-infinite.jpg"); }
+@media (max-width: 700px) {
+  .background-image:after {
+    content: "small";
+    display: none; }
+  .background-image .js-breakpoints-small {
+    position: absolute; } }
+@media (min-width: 701px) and (max-width: 1400px) {
+  .background-image:after {
+    content: "medium";
+    display: none; }
+  .background-image .js-breakpoints-medium {
+    position: absolute; } }
+@media (min-width: 1401px) and (max-width: 1800px) {
+  .background-image:after {
+    content: "large";
+    display: none; }
+  .background-image .js-breakpoints-large {
+    position: absolute; } }
+@media (min-width: 1801px) and (max-width: 999999px) {
+  .background-image:after {
+    content: "infinite";
+    display: none; }
+  .background-image .js-breakpoints-infinite {
+    position: absolute; } }
+head {
+  font-family: '"background-image" "|" "small" "medium" "large" "infinite"'; }
+.background-image.small {
+  background-image: url("../img/background-image/small.jpg"); }
+.background-image.medium {
+  background-image: url("../img/background-image/medium.jpg"); }
+.background-image.large {
+  background-image: url("../img/background-image/large.jpg"); }
 
-.inline-image img {
-  width: 100%;
-  height: auto; }
 @media (max-width: 800px) {
   .inline-image:after {
-    content: "inline-image-small";
+    content: "small";
     display: none; }
-  .inline-image .js-breakpoints-inline-image-small {
+  .inline-image .js-breakpoints-small {
     position: absolute; } }
 @media (min-width: 801px) and (max-width: 1100px) {
   .inline-image:after {
-    content: "inline-image-medium";
+    content: "medium";
     display: none; }
-  .inline-image .js-breakpoints-inline-image-medium {
+  .inline-image .js-breakpoints-medium {
     position: absolute; } }
 @media (min-width: 1101px) and (max-width: 1500px) {
   .inline-image:after {
-    content: "inline-image-large";
+    content: "large";
     display: none; }
-  .inline-image .js-breakpoints-inline-image-large {
+  .inline-image .js-breakpoints-large {
     position: absolute; } }
-@media (min-width: 1501px) and (max-width: 99999px) {
+@media (min-width: 1501px) and (max-width: 999999px) {
   .inline-image:after {
-    content: "inline-image-infinite";
+    content: "infinite";
     display: none; }
-  .inline-image .js-breakpoints-inline-image-infinite {
+  .inline-image .js-breakpoints-infinite {
     position: absolute; } }
 head {
-  font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite"'; }
+  font-family: '"background-image" "|" "small" "medium" "large" "infinite" "||" "inline-image" "|" "small" "medium" "large" "infinite"'; }
 
-.process-state .process {
-  width: 10px;
-  height: 10px;
-  background: #828282;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 100;
-  -webkit-box-shadow: 0px 0px 5px 2.5px #848484;
-  box-shadow: 0px 0px 5px 2.5px #848484; }
 @media (max-width: 500px) {
   .process-state:after {
-    content: "process-state-disable";
+    content: "disable";
     display: none; }
-  .process-state .js-breakpoints-process-state-disable {
+  .process-state .js-breakpoints-disable {
     position: absolute; } }
-@media (min-width: 501px) and (max-width: 99999px) {
+@media (min-width: 501px) and (max-width: 999999px) {
   .process-state:after {
-    content: "process-state-enable";
+    content: "infinite";
     display: none; }
-  .process-state .js-breakpoints-process-state-enable {
+  .process-state .js-breakpoints-infinite {
     position: absolute; } }
 head {
-  font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite" "||" "process-state" "|" "process-state-disable" "process-state-enable"'; }
+  font-family: '"background-image" "|" "small" "medium" "large" "infinite" "||" "inline-image" "|" "small" "medium" "large" "infinite" "||" "process-state" "|" "disable" "infinite"'; }

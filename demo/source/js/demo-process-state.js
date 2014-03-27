@@ -45,13 +45,13 @@
 
     console.log("Breakpoint : matched", this);
 
-    if (this.name.match(/enable/gi)) {
+    if (this.name.match(/disable/gi)) {
 
-      enableProcess();
+      disableProcess();
 
     } else {
 
-      disableProcess();
+      enableProcess();
 
     }
 

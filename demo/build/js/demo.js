@@ -243,14 +243,15 @@ window.Breakpoints = (function (window, document) {
 
   'use strict';
 
+  var id = 'inline-image';
   var $el = $('.inline-image');
   var $img = $el.children('img');
 
-  window.BreakpointBridge.activate('inline-image', $el, function() {
+  window.BreakpointBridge.activate(id, $el, function() {
 
     console.log("Breakpoint : matched", this);
 
-    $img.attr('src', 'img/' + this.name + '.jpg');
+    $img.attr('src', 'img/' + id + '/' + this.name + '.jpg');
 
   }, function() {
 
@@ -306,13 +307,13 @@ window.Breakpoints = (function (window, document) {
 
     console.log("Breakpoint : matched", this);
 
-    if (this.name.match(/enable/gi)) {
+    if (this.name.match(/disable/gi)) {
 
-      enableProcess();
+      disableProcess();
 
     } else {
 
-      disableProcess();
+      enableProcess();
 
     }
 

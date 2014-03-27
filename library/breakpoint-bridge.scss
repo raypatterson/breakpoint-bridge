@@ -2,6 +2,12 @@ $breakpoint-list-map: null;
 
 @mixin breakpoint-bridge( $breakpoint-list, $breakpoint-selector ) {
 
+  // Add upper bounds breakpoint 'infinite'
+  $breakpoint-infinite: "infinite" 999999px;
+  $breakpoint-list: append($breakpoint-list, $breakpoint-infinite);
+
+  // @debug $breakpoint-list;
+
   $breakpoint-list-keys: null;
   $previous-breakpoint: null;
 
@@ -16,13 +22,15 @@ $breakpoint-list-map: null;
     // @debug $key;
     // @debug $max;
 
+    $bp: $key;
+
     @if $previous-breakpoint != null {
       @media ( min-width: $previous-breakpoint + 1 ) and ( max-width: $max ) {
-        @include defineBreakpoint($key);
+        @include defineBreakpoint($bp);
       }
     } @else {
       @media ( max-width: $max ) {
-        @include defineBreakpoint($key);
+        @include defineBreakpoint($bp);
       }
     }
 
@@ -30,7 +38,7 @@ $breakpoint-list-map: null;
 
     // @debug '---';
 
-    $breakpoint-list-keys: append($breakpoint-list-keys, nth($breakpoint, 1));
+    $breakpoint-list-keys: append($breakpoint-list-keys, $bp);
   }
 
   @if $breakpoint-list-map != null {

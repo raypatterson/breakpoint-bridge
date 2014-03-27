@@ -7,14 +7,15 @@
 
   'use strict';
 
+  var id = 'inline-image';
   var $el = $('.inline-image');
   var $img = $el.children('img');
 
-  window.BreakpointBridge.activate('inline-image', $el, function() {
+  window.BreakpointBridge.activate(id, $el, function() {
 
     console.log("Breakpoint : matched", this);
 
-    $img.attr('src', 'img/' + this.name + '.jpg');
+    $img.attr('src', 'img/' + id + '/' + this.name + '.jpg');
 
   }, function() {
 

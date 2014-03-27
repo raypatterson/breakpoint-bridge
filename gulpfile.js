@@ -69,10 +69,10 @@ gulp.task('server_connect', function() {
 });
 
 gulp.task('open', function() {
-  return gulp.src('demo/build/index.html')
-    .pipe(open_browser('', {
-      url: lh_url
-    }));
+  // return gulp.src('demo/build/index.html')
+  //   .pipe(open_browser('', {
+  //     url: lh_url
+  //   }));
 });
 
 gulp.task('watch', function() {
