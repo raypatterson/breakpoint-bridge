@@ -22,15 +22,13 @@ $breakpoint-list-map: null;
     // @debug $key;
     // @debug $max;
 
-    $bp: $key;
-
     @if $previous-breakpoint != null {
       @media ( min-width: $previous-breakpoint + 1 ) and ( max-width: $max ) {
-        @include defineBreakpoint($bp);
+        @include defineBreakpoint($key);
       }
     } @else {
       @media ( max-width: $max ) {
-        @include defineBreakpoint($bp);
+        @include defineBreakpoint($key);
       }
     }
 
@@ -38,7 +36,7 @@ $breakpoint-list-map: null;
 
     // @debug '---';
 
-    $breakpoint-list-keys: append($breakpoint-list-keys, $bp);
+    $breakpoint-list-keys: append($breakpoint-list-keys, $key);
   }
 
   @if $breakpoint-list-map != null {
