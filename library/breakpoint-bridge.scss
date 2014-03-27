@@ -34,9 +34,12 @@ $breakpoint-list-map: null;
   }
 
   @if $breakpoint-list-map != null {
-    $breakpoint-list-map: append($breakpoint-list-map, '||');
+    $breakpoint-list-map: append($breakpoint-list-map, '||') !global;
   }
 
-  $breakpoint-list-map: append($breakpoint-list-map, $breakpoint-selector '|' $breakpoint-list-keys);
+  $breakpoint-list-map: append($breakpoint-list-map, $breakpoint-selector '|' $breakpoint-list-keys) !global;
 
+  @at-root head {
+    font-family: "#{$breakpoint-list-map}";
+  }
 }

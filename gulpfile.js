@@ -20,8 +20,6 @@ var lh_url = lh_vars.url.protocol + '://' + lh_vars.url.domain + ':' + lh_port +
 gulp.task('sass', function() {
   gulp.src('demo/source/sass/**/*.scss')
     .pipe(sass({
-      compass: true,
-      require: 'sassy-math',
       loadPath: ['vendor', 'library']
     }))
     .pipe(autoprefixer.apply(undefined, config.options.autoprefixer.browsers))

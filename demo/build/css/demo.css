@@ -86,6 +86,8 @@ body {
       display: none; }
     .background-image .js-breakpoints-background-image-infinite {
       position: absolute; } }
+  head {
+    font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite"'; }
   .background-image.background-image-small {
     background-image: url("../img/background-image-small.jpg"); }
   .background-image.background-image-medium {
@@ -122,6 +124,8 @@ body {
     display: none; }
   .inline-image .js-breakpoints-inline-image-infinite {
     position: absolute; } }
+head {
+  font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite"'; }
 
 .process-state .process {
   width: 10px;
@@ -145,6 +149,5 @@ body {
     display: none; }
   .process-state .js-breakpoints-process-state-enable {
     position: absolute; } }
-
 head {
   font-family: '"background-image" "|" "background-image-small" "background-image-medium" "background-image-large" "background-image-infinite" "||" "inline-image" "|" "inline-image-small" "inline-image-medium" "inline-image-large" "inline-image-infinite" "||" "process-state" "|" "process-state-disable" "process-state-enable"'; }

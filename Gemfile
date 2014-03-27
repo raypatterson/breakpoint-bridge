@@ -1,4 +1,3 @@
 source "https://rubygems.org"
 
-gem "compass"
-gem "sassy-math"
+gem "sass", "~> 3.3.0"

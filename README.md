@@ -110,8 +110,6 @@ In addition, view states which may require JavaScript to achieve can be updated 
 
 #####The [limitations](https://github.com/14islands/js-breakpoints#limitations) of JavaScript Breakpoints are also limitations of Breakpoint Bridge.
 
-Breakpoint lists need to defined and serialized _before_ being stored in the `<head>` element `font-face`. To compensate for this, the assignment happens in a separate [breakpoint-bridge-init.scss](https://github.com/RayPatterson/breakpoint-bridge/blob/master/library/breakpoint-bridge-init.scss) file. It is recommended that this file be [the last import](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/demo.scss#L4) to ensure that all breakpoint lists are added.
-
 Breakpoints are matched _from_ the value of the previous breakpoint + 1px _to_ their value. When their value is exceeded by 1px _or_ when the value of the next smallest is entered, they are exited. This exposes two issues, one of which may not be obvious.
 
 The first breakpoint does not have a smaller value. To compensate for this, it is matched between 0px and its value.
