@@ -4,6 +4,8 @@
 
 Breakpoint Bridge allows breakpoints to be defined within SASS and trigger _match_ and _exit_ events in JavaScript.
 
+[Watch the video](https://www.youtube.com/watch?v=YX3QUPNBeTE).
+
 ###Get Started
 
 From the command line: `$ ./setup`
