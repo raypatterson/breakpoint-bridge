@@ -30,6 +30,8 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
     <div class="some element">
     	...
     </div>
+    <!-- This example uses jQuery -->
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
   	<!-- Add JavaScript Breakpoints library as a dependency -->
     <script src="../../vendor/js-breakpoints/breakpoints.js"></script>
   	<!-- Add Breakpoint Bridge -->
@@ -44,15 +46,21 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
 .some.element {
 
   $breakpoint-list:
-         "small-element"    800px   //      0px    <--     800px
-        "medium-element"   1100px   //    801px    <-->    1100px
-         "large-element"  99999px   //   1101px     -->    To infinity…
-  ;
+    "small"     800px,    //      0px    <-->    800px
+    "medium"    1100px,   //    801px    <-->    1100px
+    "large"     1800px    //   1101px    <-->    1800px
+   ;
   
   // Add breakpoints and associate them with a unique ID for this element.
   @include breakpoint-bridge( $breakpoint-list, 'some-element' ); 
 }
 ```
+
+> You may be asking, "What comes after the 'large' breakpoint from '1801px' to … Infinity?" 
+> 
+> Well that's a good question! 
+>
+> The answer is the ["Infinity"](#infinity) breakpoint.
 
 ####JavaScript
 ```javascript
@@ -60,7 +68,7 @@ window.BreakpointBridge.activate(
 
   'some-element', // The unique ID
 
-  $('.some.element'), // The element
+  $('.some.element'), // The element (name is arbitrary)
 
   function() {
     // Handle breakpoint match event
@@ -78,62 +86,75 @@ window.BreakpointBridge.activate(
 
 ##What can I use it for?
 
-#####A few possible use cases have been demonstrated.
+#####A few possible use cases have been demonstrated. Each case attempts to demonstate a practical use, however it should be understood that the intention is to prove a concept and not to offer production ready solutions to problems of responsive web design.
 
-### Adding and Removing CSS Classes
+### Responsive Image Loading by Adding and Removing CSS Classes
 
-Being able to control the view state based on the active breakpoint can be quite useful. In order to demonstrate this ability, elements are assigned a unique background color for each breakpoint. 
+[SASS](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/_demo-background-image.scss) | [JavaScript](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo-background-image.js)
 
-This works by passing each element breakpoint list to a SASS [mixin](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/_demo-styles.scss#L1-L12) which iterates though the list, creates a class name from the breakpoint name and then defines a unique background color for the class.
+Being able to control the view state based on the active breakpoint can be quite useful. In order to demonstrate this ability, an element background image is updated for each breakpoint. 
 
-With the CSS rules defined for the element, it is now only a matter of creating a JavaScript [event handler for when a breakpoint is matched.](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo.js#L14-L21) Within the scope of this handler, the name of the matched breakpoint is available, and so by [adding the name as class attribute,](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo.js#L19) the background color may be updated.
+This works by passing each element breakpoint list to a SASS mixin which iterates though the list, creates a class name from the breakpoint name and then defines a unique background image for the class.
 
-The class may be removed in the same way in an [event handler for when a breakpoint is exited.](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo.js#L23-L29)
+With the CSS rules defined for the element, it is now only a matter of creating a JavaScript event handler for when a breakpoint is matched. Within the scope of this handler, the name of the matched breakpoint is available, and so by adding the name as class attribute, the background image may be updated.
 
-### Responsive Image Loading
+It is worth noting that naming conventions in which the image names match the breakpoint names and the image folder name matched the breakpoint ID come into play to make the code more streamlined.
 
-With so many solutions for handling the loading of images based on screen this may seem like a redundant feature, however it is very simple to set up and does keep everything defined in CSS, which is the primary goal.
+The class may be removed in the same way in an event handler for when a breakpoint is exited.
 
-With some additional JavaScript, This same technique could be extended to update an image tag source, but for the purposes of this demo we are only dealing with updating the CSS background image of an element.
+### Responsive Image Loading by Updating the IMG Tag SRC Attribute
 
-This works technique works _exactly_ the same way as the previous demo in which we are changing the background color values based on the active breakpoint. The only subtle difference is that the values are not randomly generated, but [defined explicitly.](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/_demo-styles.scss#L90-L104) With an image naming convention that corresponds to the breakpoint names it is possible to abstract this further into a SASS mixin.
+[SASS](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/_demo-inline-image.scss) | [JavaScript](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo-inline-image.js)
 
-### Controlling Process State
+This demo is very similar to the last in behaviour, however the underling code is slightly different.
 
-There are some cases in which you may wish to update the state of a process based on the active breakpoint. Using [a timeout](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo.js#L55-L58), a repeating, asynchronous event is simulated. This may represent an event that consumes resources, incurs bandwidth costs or is related to content within a module which is not accessible on devices with smaller screens. 
+With this technique we are not creating CSS classes with background image rules but rather updating the image tag source within a similar Javacript event handler.
 
-By inspecting the name of the breakpoint in an event handler when it is matched, the process state can be, in this case, [enabled or disabled](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo.js#L72-L80).
+Again, it is worth menioning how the naming conventions are being used to keep the code at a minimum.
 
-In addition, view states which may require JavaScript to achieve can be updated based on the active breakpoint using this technique.
+### Controlling JavaScript Process State
+
+[SASS](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/sass/_demo-process-state.scss) | [JavaScript](https://github.com/RayPatterson/breakpoint-bridge/blob/master/demo/source/js/demo-process-state.js)
+
+There are some cases in which you may wish to update the state of a process based on the active breakpoint. Using a timeout, a repeating, animation event is simulated. This represents an event that consumes resources and is related to content within a module which may not be visible on smaller screens. 
+
+By inspecting the name of the breakpoint in an event handler when it is matched, the process can be enabled or disabled.
+
+View layout, animation or asset loading states which may only be achieved with JavaScript can be updated based on the active breakpoint using this technique.
 
 ##Is there something you're not telling us?
 
-#####The [limitations](https://github.com/14islands/js-breakpoints#limitations) of JavaScript Breakpoints are also limitations of Breakpoint Bridge.
+**The [limitations](https://github.com/14islands/js-breakpoints#limitations) of JavaScript Breakpoints are also limitations of Breakpoint Bridge.**
 
 Breakpoints are matched _from_ the value of the previous breakpoint + 1px _to_ their value. When their value is exceeded by 1px _or_ when the value of the next smallest is entered, they are exited. This exposes two issues, one of which may not be obvious.
 
+###Dealing with Zero
+
 The first breakpoint does not have a smaller value. To compensate for this, it is matched between 0px and its value.
 
-The last breakpoint does not have a larger value. No breakpoint is matched when its value is exceeded and it is exited. To compensate for this, the largest breakpoint can be *"infinite"*. This value is represented in the demo code base as 99999px.
+<a name="infinity"></a>
+###Dealing with Infinity
 
-In the following example the "large" breakpoint will exit at 1401px:
+The last breakpoint does not have a larger value. To compensate for this, a breakpoint is automatically added after the last, largest breakpoint and is called *"infinite"*. This value is represented as 99999px.
+
+In the following example, if not for the "infinite" breakpoint, the "large" breakpoint will exit at 1401px and no breakpoint would be matched:
 
 ```scss
 $breakpoint-list:
-   "small"    800px,   //    0px    <--     800px
-  "medium"   1100px,   //  801px    <-->    1100px
-   "large"   1400px,   // 1101px    <-->    1400px
+   "small"    800px,    //    0px    <-->    800px
+   "medium"   1100px,   //  801px    <-->    1100px
+   "large"    1400px    // 1101px    <-->    1400px
 ;
 ```
 
-Adding an additional *"infinite"* upper limit yeilds the following:
+Behind the scenes, by adding an additional *"infinite"* upper limit yeilds the following:
 
 ```scss
 $breakpoint-list:
-   "small"    800px,   //    0px    <--     800px
-  "medium"   1100px,   //  801px    <-->    1100px
-   "large"   1400px,   // 1101px    <-->    1400px
-"infinite"  99999px,   // 1401px     -->    basically infinity :)
+   "small"       800px,     //    0px    <-->    800px
+   "medium"      1100px,    //  801px    <-->    1100px
+   "large"       1400px,    // 1101px    <-->    1400px
+   "infinite"    99999px    // 1401px     -->    basically infinity :)
 ;
 ```
 
@@ -152,7 +173,7 @@ Unison allows breakpoints defined in SASS (as well as LESS and Stylus) to be acc
 
 ###[JavaScript Breakpoints](https://github.com/14islands/js-breakpoints)
 
-Breakpoint Bridge is essentially an elaboration on JavaScript Breakpoints. What Breakpoint Bridge provides is a means by which breakpoints can be more easily defined in SASS and accessed in JavaScript, but without JavaScript Breakpoints as a dependency, Breakpoint Bridge would not be possible. 
+Breakpoint Bridge is essentially a wrapper for JavaScript Breakpoints. What Breakpoint Bridge provides is a means by which breakpoints can be more easily defined in SASS and accessed in JavaScript, but without JavaScript Breakpoints as a dependency, Breakpoint Bridge would not be possible. 
 
 ---
 
