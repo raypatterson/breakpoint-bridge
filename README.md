@@ -167,7 +167,7 @@ $breakpoint-list:
 
 ###[Unison](http://bjork24.github.io/Unison/)
 
-Unison allows breakpoints defined in SASS (as well as LESS and Stylus) to be accessed from JavaScript, however it does not provide events. It is also limited to a single set of global breakpoints. It is worth mentioning that the means by which Breakpoint Bridge accesses the breakpoint data object from the value of the `<head>` element `font-face` is [borrowed directly from Unison](https://github.com/bjork24/Unison/blob/master/css/_breakpoints.scss#L34-L39). This technique is also mentioned in the post [Making Sass talk to JavaScript with JSON](http://css-tricks.com/making-sass-talk-to-javascript-with-json/) by [Les James](https://github.com/lesjames). There are additinal credits in the article.
+Unison allows breakpoints defined in SASS (as well as LESS and Stylus) to be accessed from JavaScript, however it does not provide events. It is also limited to a single set of global breakpoints. It is worth mentioning that the means by which Breakpoint Bridge accesses the breakpoint data object from the value of the `<head>` element `font-face` is [borrowed directly from Unison](https://github.com/bjork24/Unison/blob/master/css/_breakpoints.scss#L34-L39). This technique is also mentioned in the post [Making Sass talk to JavaScript with JSON](http://css-tricks.com/making-sass-talk-to-javascript-with-json/) by [Les James](https://github.com/lesjames) and there are some additional credits in his article.
 
 ###[JavaScript Breakpoints](https://github.com/14islands/js-breakpoints)
 
