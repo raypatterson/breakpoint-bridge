@@ -4,7 +4,7 @@
 
 Breakpoint Bridge allows breakpoints to be defined within SASS and trigger _match_ and _exit_ events in JavaScript.
 
-[Watch the video](https://www.youtube.com/watch?v=YX3QUPNBeTE).
+For more information, [watch the video on YouTube](https://www.youtube.com/watch?v=YX3QUPNBeTE).
 
 ###Get Started
 
@@ -56,6 +56,7 @@ Breakpoints are defined in SASS. They are listed in ascending order and passed i
   // Add breakpoints and associate them with a unique ID for this element.
   @include breakpoint-bridge( $breakpoint-list, 'some-element' ); 
 }
+
 ```
 
 > You may be asking, "What comes after the 'large' breakpoint from '1801px' to … Infinity?" 
@@ -85,10 +86,9 @@ window.BreakpointBridge.activate(
 
 ```
 
-
 ##What can I use it for?
 
-#####A few possible use cases have been demonstrated. Each case attempts to demonstate a practical use, however it should be understood that the intention is to prove a concept and not to offer production ready solutions to problems of responsive web design.
+#####A few possible use cases have been demonstrated. Each case attempts to demonstate a practical use, however it should be understood that the intention is to share a concept. 
 
 ### Responsive Image Loading by Adding and Removing CSS Classes
 
@@ -163,19 +163,21 @@ $breakpoint-list:
 
 ##Why does it exist?
 
-#####This system is in response to three different projects to which it owes thanks and inspiration.
-
-###[Simple State Manager](http://www.simplestatemanager.com/)
-
-Simple State Manager allows media queries within JavaScript. It's not associated with CSS in any way, however the API, event and plugin systems are influential.
+#####This system is in response to other projects to which it owes thanks and inspiration.
 
 ###[Unison](http://bjork24.github.io/Unison/)
 
-Unison allows breakpoints defined in SASS (as well as LESS and Stylus) to be accessed from JavaScript, however it does not provide events. It is also limited to a single set of global breakpoints. It is worth mentioning that the means by which Breakpoint Bridge accesses the breakpoint data object from the value of the `<head>` element `font-face` is [borrowed directly from Unison](https://github.com/bjork24/Unison/blob/master/css/_breakpoints.scss#L34-L39).
+Unison allows breakpoints defined in SASS (as well as LESS and Stylus) to be accessed from JavaScript, however it does not provide events. It is also limited to a single set of global breakpoints. It is worth mentioning that the means by which Breakpoint Bridge accesses the breakpoint data object from the value of the `<head>` element `font-face` is [borrowed directly from Unison](https://github.com/bjork24/Unison/blob/master/css/_breakpoints.scss#L34-L39). This technique is also mentioned in the post [Making Sass talk to JavaScript with JSON](http://css-tricks.com/making-sass-talk-to-javascript-with-json/) by [Les James](https://github.com/lesjames). There are additinal credits in the article.
 
 ###[JavaScript Breakpoints](https://github.com/14islands/js-breakpoints)
 
 Breakpoint Bridge is essentially a wrapper for JavaScript Breakpoints. What Breakpoint Bridge provides is a means by which breakpoints can be more easily defined in SASS and accessed in JavaScript, but without JavaScript Breakpoints as a dependency, Breakpoint Bridge would not be possible. 
+
+##What's next?
+
+After getting some further usage and perhaps some feedback it might make sense to incorporate [SassyJSON](http://hugogiraudel.com/2014/01/20/json-in-sass/) or [sass-json-vars](http://viget.com/extend/sharing-data-between-sass-and-javascript-with-json), but we shall see. A the very least an upgrade to SASS Maps is in order. 
+
+Pull requests welcome!
 
 ---
 
