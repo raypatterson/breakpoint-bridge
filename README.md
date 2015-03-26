@@ -175,7 +175,7 @@ Breakpoint Bridge is essentially a wrapper for JavaScript Breakpoints. What Brea
 
 ##What's next?
 
-After getting some further usage and perhaps some feedback it might make sense to incorporate [SassyJSON](http://hugogiraudel.com/2014/01/20/json-in-sass/) or [sass-json-vars](http://viget.com/extend/sharing-data-between-sass-and-javascript-with-json), but we shall see. A the very least an upgrade to SASS Maps is in order. 
+After getting some further usage and perhaps some feedback it might make sense to incorporate [SassyJSON](http://hugogiraudel.com/2014/01/20/json-in-sass/) or [sass-json-vars](http://viget.com/extend/sharing-data-between-sass-and-javascript-with-json), but we shall see. At the very least an upgrade to SASS Maps is in order. 
 
 Pull requests welcome!
 
